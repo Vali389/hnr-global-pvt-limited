@@ -102,15 +102,9 @@ function ServiceDetailPage() {
 
           <Reveal delay={300}>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="tel:+919177111311"
-                className="inline-flex items-center gap-2.5 rounded-lg bg-[#003882] hover:bg-[#002f6c] border border-blue-400/30 px-6 py-3.5 text-sm md:text-base font-bold text-white shadow-lg transition-all hover:scale-[1.02] active:scale-95"
-              >
-                <Phone className="h-4 w-4" /> +91-9177111311
-              </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#0052cc] hover:bg-[#0047ba] px-6 py-3.5 text-sm md:text-base font-semibold text-white shadow-md transition-all hover:scale-[1.02] active:scale-95"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm md:text-base font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95"
               >
                 Start This Project <ArrowRight className="h-4 w-4" />
               </Link>
@@ -136,6 +130,24 @@ function ServiceDetailPage() {
                 <p className="mt-4 text-base md:text-lg leading-relaxed text-muted-foreground">
                   {service.overview}
                 </p>
+
+                {service.capabilities && service.capabilities.length > 0 && (
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
+                      Core Capabilities
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {service.capabilities.map((cap) => (
+                        <span
+                          key={cap}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground"
+                        >
+                          <Check className="h-3.5 w-3.5 text-primary" /> {cap}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </Reveal>
 

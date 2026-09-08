@@ -69,45 +69,46 @@
   --card-foreground: oklch(0.18 0.06 262);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.06 262);
-  --primary: oklch(0.33 0.14 260);
-  /* #00347f Exact HNR Logo Deep Royal */
+  --primary: oklch(0.546 0.245 262.881);
+  /* #1d4ed8 Brand Blue */
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.96 0.015 240);
-  --secondary-foreground: oklch(0.33 0.14 260);
+  --secondary-foreground: oklch(0.546 0.245 262.881);
   --muted: oklch(0.96 0.008 240);
   --muted-foreground: oklch(0.42 0.04 255);
-  --accent: oklch(0.55 0.18 250);
-  /* #0066cc HNR Logo Vibrant Sapphire */
+  --accent: oklch(0.623 0.214 259.815);
+  /* #3b82f6 Brand Glow Blue */
   --accent-foreground: oklch(0.99 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.9 0.012 245);
   --input: oklch(0.9 0.012 245);
-  --ring: oklch(0.55 0.18 250);
-  --navy: oklch(0.22 0.10 262);
-  /* #041f54 HNR Logo Deep Base Navy */
-  --navy-deep: oklch(0.15 0.07 264);
+  --ring: oklch(0.623 0.214 259.815);
+  --navy: oklch(0.36 0.16 262);
+  /* #1d4ed8 HNR Logo Royal Blue */
+  --navy-deep: oklch(0.25 0.12 261);
   --navy-foreground: oklch(0.98 0.005 240);
   --aqua: oklch(0.72 0.16 238);
   /* #00a8ff HNR Logo Globe Orbital Cyan */
-  --chart-1: oklch(0.33 0.14 260);
-  --chart-2: oklch(0.55 0.18 250);
+  --chart-1: oklch(0.546 0.245 262.881);
+  --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.72 0.16 238);
   --chart-4: oklch(0.65 0.1 220);
   --chart-5: oklch(0.4 0.12 265);
   --sidebar: oklch(0.98 0.004 240);
   --sidebar-foreground: oklch(0.22 0.05 260);
-  --sidebar-primary: oklch(0.33 0.14 260);
+  --sidebar-primary: oklch(0.546 0.245 262.881);
   --sidebar-primary-foreground: oklch(0.98 0.005 240);
   --sidebar-accent: oklch(0.95 0.012 240);
-  --sidebar-accent-foreground: oklch(0.33 0.14 260);
+  --sidebar-accent-foreground: oklch(0.546 0.245 262.881);
   --sidebar-border: oklch(0.9 0.012 245);
-  --sidebar-ring: oklch(0.55 0.18 250);
+  --sidebar-ring: oklch(0.623 0.214 259.815);
 
-  --gradient-navy: linear-gradient(135deg, oklch(0.15 0.07 264), oklch(0.30 0.13 260));
-  --gradient-primary: linear-gradient(135deg, oklch(0.28 0.13 260), oklch(0.33 0.14 260));
-  --shadow-card: 0 10px 30px -14px oklch(0.33 0.14 260 / 0.18);
-  --shadow-elevated: 0 24px 60px -24px oklch(0.33 0.14 260 / 0.32);
+  --gradient-navy: linear-gradient(135deg, oklch(0.20 0.09 262), oklch(0.35 0.15 262));
+  --gradient-primary: linear-gradient(135deg, oklch(0.546 0.245 262.881), oklch(0.623 0.214 259.815));
+  /* #1d4ed8 -> #3b82f6 Brand Gradient */
+  --shadow-card: 0 10px 30px -14px oklch(0.546 0.245 262.881 / 0.18);
+  --shadow-elevated: 0 24px 60px -24px oklch(0.546 0.245 262.881 / 0.32);
 }
 
 @theme inline {

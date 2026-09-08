@@ -14,7 +14,7 @@ export function SiteFooter() {
               width={140}
               height={48}
               loading="lazy"
-              className="h-12 w-auto object-contain rounded-md bg-white p-1"
+              className="h-12 w-auto object-contain rounded-md bg-white p-1 drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
             />
             <div>
               <p className="text-lg font-bold text-white">HNR Global PVT LTD</p>

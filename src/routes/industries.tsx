@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Landmark,
@@ -63,6 +63,7 @@ export const Route = createFileRoute("/industries")({
 
 const sectors = [
   {
+    id: "banking-capital-markets",
     icon: Landmark,
     title: "Banking & Capital Markets",
     category: "finance",
@@ -72,6 +73,7 @@ const sectors = [
     tags: ["Core Banking", "Lending APIs", "RegTech", "Risk Automation"],
   },
   {
+    id: "insurance",
     icon: ShieldCheck,
     title: "Insurance",
     category: "finance",
@@ -81,6 +83,7 @@ const sectors = [
     tags: ["Claims AI", "Policy Admin", "Fraud Detection", "Broker Portals"],
   },
   {
+    id: "healthcare",
     icon: HeartPulse,
     title: "Health & Care",
     category: "health",
@@ -90,6 +93,7 @@ const sectors = [
     tags: ["HIPAA Ready", "Telehealth", "EHR Sync", "Care Analytics"],
   },
   {
+    id: "life-sciences",
     icon: FlaskConical,
     title: "Life Sciences & Pharma",
     category: "health",
@@ -99,6 +103,7 @@ const sectors = [
     tags: ["Clinical Trials", "Lab Automation", "GAMP 5", "FDA Submissions"],
   },
   {
+    id: "manufacturing",
     icon: Factory,
     title: "Manufacturing & Industry 4.0",
     category: "industrial",
@@ -108,6 +113,7 @@ const sectors = [
     tags: ["IoT Telemetry", "MES Systems", "Predictive Maint.", "Supply Chain"],
   },
   {
+    id: "energy-utilities",
     icon: Zap,
     title: "Energy & Utilities",
     category: "industrial",
@@ -117,6 +123,7 @@ const sectors = [
     tags: ["Smart Grid", "SCADA Integration", "Renewables", "Asset Health"],
   },
   {
+    id: "oil-gas",
     icon: Flame,
     title: "Oil & Gas",
     category: "industrial",
@@ -126,6 +133,7 @@ const sectors = [
     tags: ["Pipeline Sensors", "HSE Analytics", "Field Operations", "Asset Twin"],
   },
   {
+    id: "transportation-logistics",
     icon: Truck,
     title: "Transportation & Logistics",
     category: "logistics",
@@ -135,6 +143,7 @@ const sectors = [
     tags: ["Route Engine", "Fleet Telematics", "WMS & Yard", "Tracking APIs"],
   },
   {
+    id: "retail-consumer",
     icon: ShoppingBag,
     title: "Retail, Consumer & Services",
     category: "retail",
@@ -144,6 +153,7 @@ const sectors = [
     tags: ["Headless Commerce", "Loyalty Hubs", "Demand AI", "Inventory Sync"],
   },
   {
+    id: "communications-media",
     icon: Radio,
     title: "Communications & Media",
     category: "telecom",
@@ -153,6 +163,7 @@ const sectors = [
     tags: ["BSS/OSS", "OTT Streaming", "Billing Engines", "Subscriber AI"],
   },
   {
+    id: "government-public",
     icon: Building2,
     title: "Government & Public Sector",
     category: "public",
@@ -162,6 +173,7 @@ const sectors = [
     tags: ["e-Governance", "Zero-Trust", "Citizen Portals", "Inter-Agency"],
   },
   {
+    id: "space-technology",
     icon: Rocket,
     title: "Space & Aerospace Tech",
     category: "space",
@@ -170,7 +182,18 @@ const sectors = [
     badge: "Aerospace",
     tags: ["Ground Station", "Telemetry Pipelines", "Flight Software", "Mission Planning"],
   },
+  {
+    id: "cloud-it-services",
+    icon: Cloud,
+    title: "Cloud & IT Services",
+    category: "tech",
+    body:
+      "Multi-cloud migrations, enterprise SaaS platform engineering, FinOps cloud cost governance and managed infrastructure services for technology enterprises.",
+    badge: "Enterprise IT",
+    tags: ["Cloud Migration", "Managed IT", "FinOps", "Multi-Cloud"],
+  },
 ];
+
 
 const highlights = [
   {
@@ -355,6 +378,19 @@ const provenOutcomes = [
 function Industries() {
   const [filter, setFilter] = useState("all");
 
+  useEffect(() => {
+    if (window.location.hash) {
+      const targetId = window.location.hash.replace("#", "");
+      setFilter("all");
+      setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 250);
+    }
+  }, []);
+
   const filteredSectors =
     filter === "all" ? sectors : sectors.filter((s) => s.category === filter);
 
@@ -518,7 +554,10 @@ function Industries() {
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredSectors.map((s, i) => (
             <Reveal key={s.title} delay={i * 60}>
-              <article className="group relative flex h-full flex-col justify-between rounded-3xl border border-blue-100/90 dark:border-blue-950/60 bg-card p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
+              <article
+                id={s.id}
+                className="group relative flex h-full flex-col justify-between rounded-3xl border border-blue-100/90 dark:border-blue-950/60 bg-card p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 scroll-mt-32"
+              >
                 <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_top,oklch(0.6_0.14_250/0.05),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col items-center">
