@@ -362,13 +362,11 @@ function Home() {
   return (
     <>
       {/* ── SECTION 1: HERO SECTION ── */}
-      <section className="relative isolate overflow-hidden min-h-[80vh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#070d1a] border-b border-slate-800/80">
-        {/* Ambient Subtle Motion Background & Minimal Glows */}
+      <section className="relative isolate overflow-hidden min-h-[85vh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#060b17] border-b border-slate-800/80">
+        {/* Ambient Motion Background & Clean Contrast Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <HeroVideoPlaylist className="w-full h-full object-cover object-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#070d1a]/95 via-[#070d1a]/85 to-[#070d1a]" />
-          <div className="absolute top-1/4 right-[15%] w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[130px]" />
-          <div className="absolute bottom-10 left-[10%] w-[450px] h-[450px] rounded-full bg-cyan-500/10 blur-[120px]" />
+          <HeroVideoPlaylist className="w-full h-full object-cover object-center opacity-70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#060b17]/75 via-[#060b17]/55 to-[#060b17]/90" />
         </div>
 
         {/* Hero Main Content */}

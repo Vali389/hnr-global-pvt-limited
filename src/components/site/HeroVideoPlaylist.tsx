@@ -1,22 +1,24 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import heroVideo from "@/assets/hero-reel2.mp4";
 import heroBg from "@/assets/hero-vortex.jpg";
 
 export function HeroVideoPlaylist({ className = "w-full h-full object-cover" }: { className?: string }) {
-  const [mounted, setMounted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    const video = videoRef.current;
+    if (!video) return;
 
-  useEffect(() => {
-    if (mounted && videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Fallback silently if autoplay policy requires interaction
+    video.defaultMuted = true;
+    video.muted = true;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay policy fallback
       });
     }
-  }, [mounted]);
+  }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
@@ -29,6 +31,11 @@ export function HeroVideoPlaylist({ className = "w-full h-full object-cover" }: 
         loop
         playsInline
         preload="auto"
+        onCanPlay={() => {
+          if (videoRef.current) {
+            videoRef.current.play().catch(() => {});
+          }
+        }}
         aria-hidden="true"
         suppressHydrationWarning
         className={className}
