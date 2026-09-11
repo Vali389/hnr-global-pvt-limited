@@ -4,7 +4,7 @@ import aiSolutionsHero from "@/assets/ai-solutions-hero.jpg";
 import cloudDevOpsHero from "@/assets/cloud-devops-hero.jpg";
 import dataAnalyticsHero from "@/assets/services-hero-unique.jpg";
 import mobileEngineeringHero from "@/assets/careers-hero.jpg";
-import techTalentHero from "@/assets/job-hero.jpg";
+import techTalentHero from "@/assets/it-non-it-talent-hero.jpg";
 import digitalTransformationHero from "@/assets/expertise-hero.jpg";
 
 export interface ServiceDetail {
@@ -706,52 +706,57 @@ export const servicesData: Record<string, ServiceDetail> = {
   "technology-talent-solutions": {
     slug: "technology-talent-solutions",
     number: "07",
-    title: "Technology Talent Solutions",
-    shortTitle: "Talent Solutions",
-    eyebrow: "STAFF AUGMENTATION • RPO • CONTRACT STAFFING • EXECUTIVE SEARCH",
-    tagline: "The Right Technology Talent, Aligned to Your Roadmap",
+    title: "IT & Non-IT Talent Solutions",
+    shortTitle: "IT & Non-IT Talent",
+    eyebrow: "IT & NON-IT STAFFING • SQUADS • CONTRACT STAFFING • EXECUTIVE SEARCH • RPO",
+    tagline: "The Right IT & Non-IT Talent, Aligned to Your Business Goals",
     heroImage: techTalentHero,
     overview:
-      "HNR Global combines recruiting expertise with technology understanding to help enterprises acquire, augment and scale specialized engineering teams.",
+      "HNR Global combines specialized recruiting expertise with deep domain understanding to help enterprises acquire, augment and scale both high-performing IT engineering teams and non-IT corporate talent.",
     capabilities: [
-      "Permanent hiring",
-      "Contract staffing",
-      "Contract-to-hire",
-      "Staff augmentation",
-      "Dedicated development teams",
-      "Executive search",
-      "RPO (Recruitment Process Outsourcing)",
-      "Project-based staffing",
-      "Managed teams",
+      "Permanent IT & Non-IT hiring",
+      "Contract staffing & staff augmentation",
+      "Contract-to-hire arrangements",
+      "Dedicated engineering squads",
+      "Executive search & C-level recruitment",
+      "Enterprise RPO (Recruitment Process Outsourcing)",
+      "Non-IT corporate talent acquisition",
+      "Project-based talent deployment",
+      "Managed talent teams",
     ],
     techEcosystem: [
-      "Java Developers",
-      ".NET Developers",
-      "Python Developers",
-      "Node.js Developers",
-      "Full Stack Developers",
-      "React / Angular / Vue Developers",
-      "AWS / Azure / GCP Engineers",
-      "DevOps Engineers",
-      "Kubernetes Engineers",
-      "Data Engineers",
-      "Data Scientists",
-      "Machine Learning Engineers",
-      "AI / GenAI Engineers",
-      "BI Developers",
-      "SAP / Salesforce / Oracle talent",
+      "Java & .NET Developers",
+      "Python & AI Engineers",
+      "Cloud & DevOps Architects",
+      "Data Scientists & Engineers",
+      "React / Angular / Mobile Leads",
+      "Project & Product Managers",
+      "Business & Financial Analysts",
+      "Operations & HR Specialists",
+      "Supply Chain & Marketing Talent",
+      "Executive Leadership (CTO, VP, Directors)",
     ],
     businessValue:
-      "The right technology talent, aligned to your roadmap. Eliminate hiring friction, onboard vetted senior engineers within 48 to 72 hours, and retain total delivery flexibility.",
+      "The right IT and Non-IT talent, aligned to your growth roadmap. Eliminate hiring friction, onboard vetted professionals within 48 to 72 hours, and retain total organizational flexibility.",
     coreOfferings: [
       {
-        title: "Staff Augmentation (Dedicated Engineers)",
-        description: "Plug elite individual contributors directly into your existing engineering squads.",
+        title: "IT Staff Augmentation & Dedicated Engineers",
+        description: "Plug elite individual technical contributors directly into your active software engineering squads.",
         bullets: [
-          "Senior full-stack, mobile, DevOps, and AI engineers",
-          "Dedicated 40 hrs/week aligned with your time zone",
-          "Direct Slack/Jira integration with your management",
+          "Senior full-stack, backend, cloud, DevOps, and AI/ML engineers",
+          "Dedicated 40 hrs/week aligned precisely with your time zone",
+          "Direct Slack/Jira integration with your internal management",
           "Risk-free 2-week trial period with zero lock-in",
+        ],
+      },
+      {
+        title: "Non-IT & Corporate Staffing Solutions",
+        description: "Hire vetted corporate talent across operations, finance, human resources, sales, and management.",
+        bullets: [
+          "Operations managers, executive assistants, and project coordinators",
+          "Financial analysts, accounting specialists, and procurement leads",
+          "HR generalists, talent acquisition partners, and compliance managers",
+          "Vetted industry professionals with proven track records",
         ],
       },
       {
@@ -765,23 +770,23 @@ export const servicesData: Record<string, ServiceDetail> = {
         ],
       },
       {
-        title: "Permanent & Executive Search",
-        description: "Find high-impact permanent leaders (VP Engineering, CTO, Principal Architects, Product Directors).",
+        title: "Permanent & Executive Search (IT & Non-IT)",
+        description: "Find high-impact permanent leaders (VP Engineering, CTO, CFO, Operations Directors, Product Leads).",
         bullets: [
-          "Comprehensive technical screening by veteran architects",
-          "Cultural and leadership alignment vetting",
-          "Background verification and reference validation",
+          "Comprehensive technical & domain screening by veteran leaders",
+          "Cultural, leadership, and operational alignment vetting",
+          "Strict background verification and reference validation",
           "90-day placement guarantee with replacement protection",
         ],
       },
       {
-        title: "Contract-to-Hire & RPO Solutions",
-        description: "Evaluate candidates on real projects before extending permanent employment offers.",
+        title: "Contract-to-Hire & Enterprise RPO",
+        description: "End-to-end recruitment outsourcing or flexible trial periods before extending full-time offers.",
         bullets: [
           "Flexible 3 to 6-month contract-to-hire trial arrangements",
           "Full Recruitment Process Outsourcing (RPO) management",
           "Payroll, benefits, and compliance handled seamlessly",
-          "Predictable fixed placement or monthly fee models",
+          "Predictable fixed placement or monthly retainer models",
         ],
       },
     ],

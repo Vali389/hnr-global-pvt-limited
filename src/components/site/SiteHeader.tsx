@@ -67,8 +67,8 @@ const servicesDropdownItems = [
   },
   {
     slug: "technology-talent-solutions",
-    title: "Technology Talent Solutions",
-    desc: "Top IT talent on demand",
+    title: "IT & Non-IT Talent Solutions",
+    desc: "IT & non-IT talent on demand",
     icon: Users,
   },
   {

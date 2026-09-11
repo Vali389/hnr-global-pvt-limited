@@ -46,6 +46,7 @@ import {
 } from "lucide-react";
 import about from "@/assets/about.jpg";
 import aiSolutionsHero from "@/assets/ai-solutions-hero.jpg";
+import itNonItTalentHero from "@/assets/it-non-it-talent-hero.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { Marquee } from "@/components/site/Marquee";
 import { CtaBand } from "@/components/site/CtaBand";
@@ -130,10 +131,10 @@ const services = [
   {
     num: "07",
     icon: Users,
-    title: "Technology & Talent Solutions",
+    title: "IT & Non-IT Talent Solutions",
     eyebrow: "IT & NON-IT STAFFING & SQUADS",
-    body: "Permanent hiring, contract staffing, IT and non-IT recruitment, dedicated engineering squads, executive search, and enterprise RPO.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    body: "Permanent hiring, contract staffing, IT engineering squads, Non-IT corporate talent, executive search, and enterprise RPO.",
+    image: itNonItTalentHero,
     link: "/services/technology-talent-solutions",
   },
   {
@@ -463,7 +464,7 @@ function Home() {
               </span>
             </h2>
             <p className="mt-3 text-xs sm:text-sm md:text-base leading-relaxed text-center text-slate-600 font-medium max-w-3xl mx-auto whitespace-normal sm:whitespace-nowrap">
-              From custom software to GenAI and cloud DevOps, we build and scale high-impact enterprise solutions.
+              From custom software and AI to Cloud DevOps and IT & Non-IT talent solutions, we build and scale high-impact enterprise capabilities.
             </p>
           </Reveal>
 
