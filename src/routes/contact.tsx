@@ -217,10 +217,10 @@ function Contact() {
                           />
                         </div>
 
-                        {/* Primary Service */}
+                        {/* Primary Service / Requirement */}
                         <div>
                           <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                            Primary Service Needed
+                            Primary Requirement Needed
                           </label>
                           <select
                             value={formData.service}
@@ -231,6 +231,8 @@ function Contact() {
                             <option value="Product Development & Engineering">Product Development & Engineering</option>
                             <option value="Mobile App Development">Mobile App Development</option>
                             <option value="IT Recruitment & Staffing">IT Recruitment & Staffing</option>
+                            <option value="Non-IT Staffing & Talent Solutions">Non-IT Staffing & Talent Solutions</option>
+                            <option value="Non-IT Operational & Business Requirement">Non-IT Operational & Business Requirement</option>
                             <option value="Digital Transformation Consulting">Digital Transformation Consulting</option>
                             <option value="AI, Data & Intelligent Automation">AI, Data & Intelligent Automation</option>
                           </select>

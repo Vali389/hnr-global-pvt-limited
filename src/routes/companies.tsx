@@ -64,7 +64,7 @@ const engagementModels = [
     title: "Specialized Talent Augmentation",
     tag: "ON-DEMAND EXPERTISE",
     badgeColor: "bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/20",
-    desc: "Deploy pre-vetted niche talent—from AI/ML engineers to cloud infrastructure specialists—within 48 hours to accelerate roadmap velocity.",
+    desc: "Deploy pre-vetted talent—across software engineering, AI/cloud infrastructure, and non-IT corporate operations—within 48 hours to accelerate roadmap velocity.",
   },
   {
     icon: Workflow,

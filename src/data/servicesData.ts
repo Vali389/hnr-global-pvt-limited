@@ -790,6 +790,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { category: "Cloud & DevOps Talent", skills: ["DevOps / SRE Engineers", "AWS / Azure Cloud Architects", "Kubernetes Specialists", "Security & InfoSec Leads"] },
       { category: "Data & AI Talent", skills: ["AI / ML Engineers", "Data Engineers (Spark, Snowflake, dbt)", "BI & Analytics Developers", "Data Scientists"] },
       { category: "Enterprise & Leadership", skills: ["CTOs & VP of Engineering", "Technical Product Managers", "Scrum Masters", "SAP / Salesforce / Oracle Leads"] },
+      { category: "Non-IT & Business Talent", skills: ["Operations & Project Managers", "Business Analysts & Finance", "HR & Talent Partners", "Executive & Administrative Specialists"] },
     ],
     process: [
       { step: "01", title: "Requirement Blueprint", description: "Define exact tech stack, seniority, domain familiarity, and team communication style." },
