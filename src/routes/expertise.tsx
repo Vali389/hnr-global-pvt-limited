@@ -448,7 +448,7 @@ function ExpertisePage() {
                           to="/contact"
                           className="inline-flex items-center gap-2 rounded-xl bg-primary hover:bg-primary/90 text-white px-5 py-2.5 text-xs sm:text-sm font-bold shadow-sm transition-all cursor-pointer group/link"
                         >
-                          <span>Request {domain.name} Architecture Review</span>
+                          <span>Contact Us</span>
                           <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
                         </Link>
                       </div>
@@ -553,7 +553,7 @@ function ExpertisePage() {
                   to="/contact"
                   className="rounded-xl bg-[#38bdf8] hover:bg-[#00a8ff] text-[#030914] px-7 py-3.5 text-sm font-bold shadow-lg shadow-[#38bdf8]/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
                 >
-                  Reach Out to Our Team
+                  Contact Us
                 </Link>
                 <Link
                   to="/delivery"

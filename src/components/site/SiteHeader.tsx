@@ -228,7 +228,7 @@ export function SiteHeader() {
             alt="HNR Global PVT LTD"
             width={320}
             height={90}
-            className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto rounded-xl shadow-lg border border-white/15 transition-transform duration-200 group-hover:scale-[1.02] object-contain"
+            className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto rounded-2xl transition-transform duration-200 group-hover:scale-[1.02] object-contain"
           />
         </Link>
 

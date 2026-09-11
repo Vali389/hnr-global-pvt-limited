@@ -135,9 +135,9 @@ const engagementModels = [
     idealFor: "CTOs and engineering leaders navigating complex migrations or technology vendor selection.",
   },
   {
-    title: "RPO / Talent Acquisition",
-    desc: "End-to-end recruitment process outsourcing managing candidate sourcing, technical vetting, and onboarding.",
-    idealFor: "Enterprises scaling new engineering centers or hiring 20+ specialized engineers.",
+    title: "IT & Non-IT Talent Acquisition / RPO",
+    desc: "End-to-end recruitment process outsourcing managing candidate sourcing, technical and non-technical vetting, and onboarding.",
+    idealFor: "Enterprises scaling new engineering centers or hiring 20+ specialized IT and corporate professionals.",
   },
   {
     title: "Strategic Transformation Engagements",

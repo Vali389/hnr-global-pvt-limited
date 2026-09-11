@@ -130,9 +130,9 @@ const services = [
   {
     num: "07",
     icon: Users,
-    title: "Technology Talent Solutions",
-    eyebrow: "STAFF AUGMENTATION & SQUADS",
-    body: "Permanent hiring, contract staffing, dedicated engineering squads, executive search, and end-to-end recruitment process outsourcing.",
+    title: "Technology & Talent Solutions",
+    eyebrow: "IT & NON-IT STAFFING & SQUADS",
+    body: "Permanent hiring, contract staffing, IT and non-IT recruitment, dedicated engineering squads, executive search, and enterprise RPO.",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
     link: "/services/technology-talent-solutions",
   },
@@ -206,8 +206,8 @@ const engagementModels = [
     desc: "Principal architect assessments for modernization, cloud migration, legacy refactoring, and AI roadmaps.",
   },
   {
-    title: "RPO / Talent Acquisition",
-    desc: "End-to-end recruitment process outsourcing for rapid hiring surges and specialized niche roles.",
+    title: "IT & Non-IT Talent Acquisition / RPO",
+    desc: "End-to-end recruitment process outsourcing for rapid hiring surges across IT and corporate roles.",
   },
   {
     title: "Strategic Transformation Engagements",

@@ -61,7 +61,7 @@ const serviceCoreFocus: Record<string, string[]> = {
   "04": ["AWS & Azure & GCP", "Kubernetes", "CI/CD Automation", "FinOps & Observability"],
   "05": ["Modern Data Platforms", "Data Engineering & ETL", "Power BI & Tableau", "Governance"],
   "06": ["iOS & Android", "Flutter & React Native", "Offline-First", "App Store Release"],
-  "07": ["Staff Augmentation", "Dedicated Squads", "Contract-to-Hire", "Executive Search"],
+  "07": ["IT & Non-IT Staffing", "Dedicated Squads", "Contract-to-Hire", "Executive Search"],
   "08": ["Legacy Modernization", "Process Automation", "Cloud Transformation", "Technology Strategy"],
 };
 
