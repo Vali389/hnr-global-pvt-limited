@@ -538,14 +538,14 @@ function ExpertisePage() {
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
           <Reveal>
-            <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-[#041f54] via-[#030914] to-[#00347f] p-8 sm:p-14 text-white shadow-2xl">
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#38bdf8] block">
+            <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-[#041f54] via-[#030914] to-[#00347f] p-6 sm:p-10 text-white shadow-2xl">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#38bdf8] block">
                 LET'S TALK ARCHITECTURE
               </span>
-              <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-black text-white">
+              <h2 className="mt-3 text-lg sm:text-xl md:text-2xl font-extrabold text-white">
                 Schedule an Architectural &amp; Feasibility Review
               </h2>
-              <p className="mt-4 text-sm sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed font-normal">
+              <p className="mt-3 text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
                 Connect directly with our Principal Solutions Architects in Visakhapatnam and Hyderabad to review your existing codebase, technical debt roadmap, or squad ramp-up timeline.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
