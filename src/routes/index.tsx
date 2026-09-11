@@ -362,21 +362,19 @@ function Home() {
   return (
     <>
       {/* ── SECTION 1: HERO SECTION ── */}
-      <section className="relative isolate overflow-hidden min-h-screen flex flex-col justify-between pt-28 pb-10 bg-[#06152F] border-b border-blue-900/40">
-        {/* Ambient Volumetric Glow Blooms */}
+      <section className="relative isolate overflow-hidden min-h-[80vh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#070d1a] border-b border-slate-800/80">
+        {/* Ambient Subtle Motion Background & Minimal Glows */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <HeroVideoPlaylist className="w-full h-full object-cover object-center brightness-105 contrast-105 opacity-80" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#06152F]/95 via-[#081e42]/85 to-[#002f8a]/80" />
-          <div className="absolute top-1/4 right-[10%] w-[700px] h-[700px] rounded-full bg-[#003BB2]/35 blur-[140px]" />
-          <div className="absolute top-1/3 right-[18%] w-[500px] h-[500px] rounded-full bg-[#0EA5E9]/20 blur-[110px]" />
-          <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-[#003BB2]/20 blur-[130px]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#06152F] via-transparent to-transparent z-10" />
+          <HeroVideoPlaylist className="w-full h-full object-cover object-center opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#070d1a]/95 via-[#070d1a]/85 to-[#070d1a]" />
+          <div className="absolute top-1/4 right-[15%] w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[130px]" />
+          <div className="absolute bottom-10 left-[10%] w-[450px] h-[450px] rounded-full bg-cyan-500/10 blur-[120px]" />
         </div>
 
         {/* Hero Main Content */}
-        <div className="relative z-20 flex-1 mx-auto max-w-5xl px-6 flex flex-col items-center justify-center text-center">
+        <div className="relative z-20 mx-auto max-w-5xl px-6 flex flex-col items-center justify-center text-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2 mb-4 rounded-full border border-blue-500/35 bg-blue-500/10 backdrop-blur-sm px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-blue-300">
+            <span className="inline-flex items-center gap-2 mb-4 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-blue-300">
               <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
               Enterprise Technology &amp; Talent Partner
             </span>
@@ -392,121 +390,49 @@ function Home() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-5 text-base sm:text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed font-normal">
+            <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
               Shaping the future of technology through human-centric innovation, resilient enterprise software, and world-class engineering squads.
             </p>
           </Reveal>
 
-          {/* Dual Split Action Cards */}
-          <Reveal delay={240} className="w-full max-w-2xl mt-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Dual Compact Action Cards (Decreased Height & Clean Frosted Glass) */}
+          <Reveal delay={240} className="w-full max-w-2xl mt-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <Link
                 to="/companies"
-                className="group flex flex-col justify-between gap-5 rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-xl text-left shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/15 relative overflow-hidden"
+                className="group flex items-center justify-between gap-4 rounded-xl border border-white/15 bg-white/[0.07] px-4 py-3.5 backdrop-blur-md text-left shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/[0.12]"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                <div className="relative z-10">
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300 block">
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cyan-400 block">
                     For Companies
                   </span>
-                  <span className="mt-1.5 block text-lg font-semibold leading-snug text-white transition-colors">
+                  <span className="mt-0.5 block text-sm sm:text-base font-bold text-white leading-snug">
                     Delivering Client Success &amp; Scale
                   </span>
                 </div>
-                <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 border border-white/40 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-110 shadow-lg transition-all">
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-105 shadow-sm transition-all">
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </div>
               </Link>
 
               <Link
                 to="/careers"
-                className="group flex flex-col justify-between gap-5 rounded-2xl bg-gradient-to-br from-[#1d4ed8] to-[#3b82f6] hover:from-[#2563eb] hover:to-[#60a5fa] p-5 text-left shadow-xl shadow-blue-700/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-blue-500/40 relative overflow-hidden"
+                className="group flex items-center justify-between gap-4 rounded-xl border border-white/15 bg-white/[0.07] px-4 py-3.5 backdrop-blur-md text-left shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/[0.12]"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                <div className="relative z-10">
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200 block">
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cyan-300 block">
                     For Job Seekers
                   </span>
-                  <span className="mt-1.5 block text-lg font-semibold leading-snug text-white transition-colors">
+                  <span className="mt-0.5 block text-sm sm:text-base font-bold text-white leading-snug">
                     Find Your Next Career Breakthrough
                   </span>
                 </div>
-                <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 border border-white/40 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-110 shadow-lg transition-all">
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-105 shadow-sm transition-all">
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </div>
               </Link>
             </div>
           </Reveal>
-        </div>
-
-        {/* Floating Trust Metric Bar (ConfigUSA Style) */}
-        <div className="relative z-30 w-full px-4 sm:px-6 lg:px-8 mt-12">
-          <div className="mx-auto max-w-5xl w-full">
-            <div className="relative overflow-hidden rounded-2xl bg-white/95 backdrop-blur-md shadow-elegant ring-1 ring-black/5">
-              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600" />
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 md:divide-x md:divide-slate-200/60">
-                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
-                    <Users className="h-4 w-4" />
-                  </span>
-                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
-                    500+
-                  </div>
-                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
-                    Professionals Placed
-                  </div>
-                </div>
-
-                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
-                    <ShieldCheck className="h-4 w-4" />
-                  </span>
-                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
-                    100+
-                  </div>
-                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
-                    Happy Clients
-                  </div>
-                </div>
-
-                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
-                    <Layers className="h-4 w-4" />
-                  </span>
-                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
-                    13+
-                  </div>
-                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
-                    Industries Served
-                  </div>
-                </div>
-
-                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
-                    <CheckCircle2 className="h-4 w-4" />
-                  </span>
-                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
-                    98.4%
-                  </div>
-                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
-                    Client Retention
-                  </div>
-                </div>
-
-                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40 col-span-2 sm:col-span-1">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
-                    <Rocket className="h-4 w-4" />
-                  </span>
-                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
-                    24/7
-                  </div>
-                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
-                    Global Delivery
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
