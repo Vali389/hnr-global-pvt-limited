@@ -365,8 +365,8 @@ function Home() {
       <section className="relative isolate overflow-hidden min-h-[85vh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#060b17] border-b border-slate-800/80">
         {/* Ambient Motion Background & Clean Contrast Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <HeroVideoPlaylist className="w-full h-full object-cover object-center opacity-70" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#060b17]/75 via-[#060b17]/55 to-[#060b17]/90" />
+          <HeroVideoPlaylist className="w-full h-full object-cover object-center opacity-85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#060b17]/60 via-[#060b17]/40 to-[#060b17]/80" />
         </div>
 
         {/* Hero Main Content */}
