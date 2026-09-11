@@ -157,80 +157,105 @@ function DeliveryModelPage() {
       />
 
       {/* 4-Phase Delivery Framework */}
-      <section className="py-24">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="max-w-3xl mb-16">
+            <div className="max-w-2xl mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
                 THE 4-PHASE LIFECYCLE
               </span>
-              <h2 className="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl text-foreground">
                 How We Deliver Complex Enterprise Systems
               </h2>
-              <p className="mt-3 text-base text-muted-foreground leading-relaxed">
-                Every project progresses through verified stage-gates, preventing scope drift and guaranteeing software that is secure, compliant, and maintainable.
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                Structured stage-gates with verifiable sign-offs, preventing scope creep and guaranteeing on-time, compliant software delivery.
               </p>
             </div>
           </Reveal>
 
-          <div className="space-y-12">
+          {/* Stepper Pipeline with Connecting Line */}
+          <div className="relative">
             {deliveryPhases.map((phase, idx) => {
               const Icon = phase.icon;
+              const isLast = idx === deliveryPhases.length - 1;
+
               return (
-                <Reveal key={phase.phase} delay={idx * 60}>
-                  <div className="rounded-3xl border border-border bg-card p-8 md:p-12 shadow-xs transition-all duration-300 hover:border-primary/40 hover:shadow-lg">
-                    <div className="grid gap-8 lg:grid-cols-12 items-start">
-                      {/* Phase Badge & Header */}
-                      <div className="lg:col-span-5 space-y-4">
-                        <div className="flex items-center gap-3">
-                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-white font-mono font-black text-lg">
-                            {phase.phase}
-                          </span>
-                          <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
-                            Phase {phase.phase}
-                          </span>
-                        </div>
-
-                        <div>
-                          <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                            {phase.title}
-                          </h3>
-                          <p className="mt-1 text-sm font-semibold text-primary/90">
-                            {phase.subtitle}
-                          </p>
-                        </div>
-
-                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                          {phase.description}
-                        </p>
-
-                        <div className="rounded-xl border border-primary/20 bg-primary/5 p-4">
-                          <span className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5">
-                            <ShieldCheck className="h-4 w-4" /> Quality Gate:
-                          </span>
-                          <p className="mt-1 text-xs sm:text-sm font-semibold text-foreground">
-                            {phase.qualityGate}
-                          </p>
-                        </div>
+                <Reveal key={phase.phase} delay={idx * 50}>
+                  <div className="relative flex items-stretch gap-4 sm:gap-6 md:gap-8 group">
+                    {/* Stepper Rail & Connector Line Between Cards */}
+                    <div className="flex flex-col items-center shrink-0">
+                      {/* Step Indicator Node */}
+                      <div className="relative z-10 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-blue-700 text-white font-mono font-bold text-sm sm:text-base shadow-md shadow-primary/25 ring-4 ring-background transition-transform duration-300 group-hover:scale-105">
+                        {phase.phase}
                       </div>
 
-                      {/* Deliverables List */}
-                      <div className="lg:col-span-7 rounded-2xl bg-muted/30 border border-border/60 p-6 md:p-8 space-y-4">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                          Key Deliverables &amp; Artifacts
-                        </h4>
-                        <div className="grid gap-3 sm:grid-cols-2">
-                          {phase.deliverables.map((del) => (
-                            <div
-                              key={del}
-                              className="flex items-start gap-2.5 rounded-xl border border-border/50 bg-background p-3.5 shadow-2xs text-xs sm:text-sm"
-                            >
-                              <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                              <span className="text-foreground/90 font-medium leading-snug">
-                                {del}
-                              </span>
+                      {/* Stepper Line connecting between cards to the next card */}
+                      {!isLast && (
+                        <div className="relative w-0.5 flex-1 my-2 bg-slate-200 dark:bg-slate-800">
+                          {/* Colored Stepper Track */}
+                          <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/70 to-primary/30" />
+                          {/* Midpoint pulse dot */}
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary ring-2 ring-background" />
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Compact Card with Decreased Height */}
+                    <div className={`flex-1 rounded-2xl border border-border bg-card p-5 sm:p-6 shadow-2xs transition-all duration-300 hover:border-primary/40 hover:shadow-md ${!isLast ? "mb-5 sm:mb-6" : ""}`}>
+                      <div className="grid gap-5 lg:grid-cols-12 items-center">
+                        {/* Phase Info (Decreased vertical height) */}
+                        <div className="lg:col-span-5 space-y-2">
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary">
+                              Phase {phase.phase}
+                            </span>
+                            <span className="text-muted-foreground/30">•</span>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground font-semibold">
+                              <Icon className="h-3.5 w-3.5 text-primary" />
+                              <span>Stage Gate</span>
                             </div>
-                          ))}
+                          </div>
+
+                          <div>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground tracking-tight">
+                              {phase.title}
+                            </h3>
+                            <p className="text-xs sm:text-sm font-semibold text-primary/90 mt-0.5">
+                              {phase.subtitle}
+                            </p>
+                          </div>
+
+                          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                            {phase.description}
+                          </p>
+
+                          <div className="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/5 px-2.5 py-1 text-xs font-semibold text-foreground">
+                            <ShieldCheck className="h-3.5 w-3.5 text-primary shrink-0" />
+                            <span className="truncate">{phase.qualityGate}</span>
+                          </div>
+                        </div>
+
+                        {/* Deliverables List (Decreased height 2x2 grid) */}
+                        <div className="lg:col-span-7 rounded-xl bg-muted/30 border border-border/60 p-3.5 sm:p-4">
+                          <div className="flex items-center justify-between mb-2">
+                            <h4 className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                              Key Deliverables &amp; Artifacts
+                            </h4>
+                            <span className="text-[10px] font-mono font-semibold text-primary px-2 py-0.5 rounded-full bg-primary/10">
+                              4 Milestones
+                            </span>
+                          </div>
+                          <div className="grid gap-2 sm:grid-cols-2">
+                            {phase.deliverables.map((del) => (
+                              <div
+                                key={del}
+                                className="flex items-start gap-2 rounded-lg border border-border/50 bg-background/90 px-3 py-1.5 text-xs text-foreground/90 font-medium shadow-2xs"
+                              >
+                                <CheckCircle2 className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
+                                <span className="leading-snug">{del}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -243,18 +268,18 @@ function DeliveryModelPage() {
       </section>
 
       {/* Enterprise Engagement Models */}
-      <section className="bg-muted/30 py-24 border-y border-border">
+      <section className="bg-muted/30 py-20 border-y border-border">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="max-w-3xl mb-16">
+            <div className="max-w-2xl mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
                 FLEXIBLE PARTNERSHIPS
               </span>
               <h2 className="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl text-foreground">
                 Enterprise Engagement Models
               </h2>
-              <p className="mt-3 text-base text-muted-foreground leading-relaxed">
-                Choose the operational model that aligns with your governance requirements, roadmap velocity, and budget structures.
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                Flexible operational frameworks tailored to your roadmap velocity, governance standards, and financial models.
               </p>
             </div>
           </Reveal>
@@ -293,6 +318,20 @@ function DeliveryModelPage() {
       {/* Governance & Communication Cadences */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <div className="max-w-2xl mb-12">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                OPERATIONAL GOVERNANCE
+              </span>
+              <h2 className="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl text-foreground">
+                Governance & Communication Cadences
+              </h2>
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                Transparent sprint cadences, enterprise security standards, and SLA-backed engineering accountability.
+              </p>
+            </div>
+          </Reveal>
+
           <Reveal>
             <div className="grid gap-8 md:grid-cols-3">
               <div className="rounded-2xl border border-border bg-card p-6 shadow-xs">

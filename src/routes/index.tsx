@@ -579,10 +579,10 @@ function Home() {
       </section>
 
       {/* ── SECTION 4: ENTERPRISE DELIVERY MODEL ROADMAP ── */}
-      <section className="bg-gradient-to-b from-[#f8fafc] via-[#edf4fc] to-[#f8fafc] border-b border-blue-100/70 py-24 relative overflow-hidden">
+      <section className="bg-gradient-to-b from-[#f8fafc] via-[#edf4fc] to-[#f8fafc] border-b border-blue-100/70 py-20 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
-          <Reveal className="text-center max-w-4xl mx-auto">
-            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+          <Reveal className="text-center max-w-3xl mx-auto">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-3 flex items-center gap-2 justify-center text-blue-700">
               <span className="h-px w-6 bg-blue-600" />
               Delivery Framework
             </p>
@@ -592,47 +592,62 @@ function Home() {
                 4 Proven Phases
               </span>
             </h2>
-            <p className="mt-3.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
-              A clear agile delivery framework that guarantees predictability, transparency, and velocity across all client engagements.
+            <p className="mt-2.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-xl mx-auto">
+              Structured stage-gates with verifiable milestones, guaranteeing predictability, zero scope drift, and rapid velocity.
             </p>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {processSteps.map((p, idx) => (
-              <Reveal key={p.title} delay={idx * 80}>
-                <div className="group relative flex h-full flex-col justify-between rounded-2xl sm:rounded-3xl border border-blue-100/80 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-elegant">
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 font-bold shadow-xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300">
-                        <p.icon className="h-5 w-5" />
-                      </span>
-                      <span className="text-xs font-black text-slate-300 font-mono">
-                        {p.step}
-                      </span>
+          {/* Stepper Grid with Connector Line Between Cards */}
+          <div className="mt-12 relative">
+            {/* Horizontal Stepper Connecting Line across cards (Desktop) */}
+            <div className="hidden lg:block absolute top-9 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 z-0 opacity-40" />
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 relative z-10">
+              {processSteps.map((p, idx) => (
+                <Reveal key={p.title} delay={idx * 70}>
+                  <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-blue-100/80 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-elegant">
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 font-bold shadow-xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 ring-4 ring-white">
+                          <p.icon className="h-5 w-5" />
+                        </span>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[11px] font-black text-blue-700 font-mono px-2 py-0.5 rounded-md bg-blue-50 border border-blue-100">
+                            Phase {p.step}
+                          </span>
+                        </div>
+                      </div>
+
+                      <h3 className="mt-4 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        {p.title}
+                      </h3>
+                      <p className="mt-0.5 text-xs font-semibold text-blue-600">
+                        {p.subtitle}
+                      </p>
+                      <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+                        {p.description}
+                      </p>
                     </div>
-                    <h3 className="mt-5 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                      {p.title}
-                    </h3>
-                    <p className="mt-1 text-xs font-semibold text-blue-600">
-                      {p.subtitle}
-                    </p>
-                    <p className="mt-3 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
-                      {p.description}
-                    </p>
+
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                      <div className="flex items-center gap-1.5">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-cyan-500 shrink-0" />
+                        <span className="truncate">Quality Gate Passed</span>
+                      </div>
+                      {idx < processSteps.length - 1 && (
+                        <ArrowRight className="hidden lg:block h-3.5 w-3.5 text-blue-400 opacity-60 group-hover:translate-x-1 transition-transform" />
+                      )}
+                    </div>
                   </div>
-                  <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-blue-600">
-                    <CheckCircle2 className="h-4 w-4 text-cyan-500" />
-                    <span>Verified Quality Gate</span>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              ))}
+            </div>
           </div>
 
-          <Reveal className="mt-12 text-center">
+          <Reveal className="mt-10 text-center">
             <Link
               to="/delivery"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-7 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-7 py-3 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
             >
               <span>Explore Full Delivery &amp; Governance Model</span>
               <ArrowRight className="h-4 w-4" />
