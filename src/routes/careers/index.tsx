@@ -175,7 +175,9 @@ function CareersPage() {
 
       // Experience
       if (selectedExperiences.length > 0) {
-        const matchesExp = selectedExperiences.some((e) => job.experience.includes(e));
+        const matchesExp = selectedExperiences.some(
+          (e) => job.experience.includes(e) || e.includes(job.experience) || (e.includes("7") && job.experience.includes("7"))
+        );
         if (!matchesExp) return false;
       }
 

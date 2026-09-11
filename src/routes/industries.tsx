@@ -451,7 +451,7 @@ function Industries() {
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 px-7 py-3.5 text-sm md:text-base font-semibold text-white backdrop-blur-md transition-all hover:scale-105 shadow-md"
               >
-                Consult Industry Architect
+                Reach Out to Our Team
               </Link>
             </div>
           </Reveal>

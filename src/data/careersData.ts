@@ -238,6 +238,38 @@ export const openings: JobOpening[] = [
       "Certification support for cloud and quality engineering.",
     ],
   },
+  {
+    id: "principal-architect",
+    title: "Principal Enterprise Solutions Architect",
+    department: "Software Engineering",
+    location: "Hyderabad / Hybrid",
+    type: "Full-Time",
+    experience: "7 to 15+ years",
+    compensation: "₹35,00,000 – ₹55,00,000 PA",
+    postedDate: "1 day ago",
+    postedDaysAgo: 1,
+    skills: ["Cloud Architecture", "Distributed Systems", "AWS/Azure", "Microservices", "Event-Driven", "Kubernetes"],
+    description:
+      "Drive high-level technical architecture and technical strategy for multi-tier global enterprise modernization contracts. You will mentor engineering squads, interface with C-level stakeholders, and architect resilient, high-concurrency systems.",
+    responsibilities: [
+      "Define enterprise architecture blueprints for complex legacy modernizations and cloud migrations.",
+      "Lead cross-functional engineering teams in delivering zero-downtime, fault-tolerant solutions.",
+      "Establish technical governance, security frameworks, and engineering standards across projects.",
+      "Engage directly with global Fortune 500 technology leaders on architectural discovery and roadmaps.",
+    ],
+    requirements: [
+      "7 to 15+ years of extensive software engineering and enterprise architecture experience.",
+      "Proven track record designing large-scale distributed systems and cloud-native solutions.",
+      "Deep expertise across modern cloud platforms (AWS/Azure/GCP), microservices, and event-driven architecture.",
+      "Outstanding leadership, executive presence, and clear stakeholder communication.",
+    ],
+    offerings: [
+      "Executive compensation package with performance equity incentives.",
+      "Direct leadership impact shaping enterprise client digital strategies.",
+      "Comprehensive family healthcare and executive wellness benefits.",
+      "Flexible hybrid executive schedule with global team collaboration.",
+    ],
+  },
 ];
 
 export const industryOptions = [
@@ -253,4 +285,4 @@ export const locationOptions = ["Visakhapatnam", "Hyderabad", "Hybrid", "Remote"
 
 export const jobTypeOptions = ["Full-Time", "Contract", "Hybrid", "Remote"];
 
-export const experienceOptions = ["0–2 years", "2–5 years", "3–6 years", "4–7 years"];
+export const experienceOptions = ["0–2 years", "2–5 years", "3–6 years", "4–7 years", "7 to 15+ years"];

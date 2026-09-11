@@ -121,14 +121,8 @@ function ServiceDetailPage() {
                     to="/contact"
                     className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm md:text-base font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95"
                   >
-                    Start This Project <ArrowRight className="h-4 w-4" />
+                    Reach Out to Our Team <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <a
-                    href="tel:+919177111311"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm md:text-base font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-all"
-                  >
-                    <Phone className="h-4 w-4 text-cyan-400" /> Speak With an Architect
-                  </a>
                 </div>
               </Reveal>
             </div>
@@ -383,26 +377,20 @@ function ServiceDetailPage() {
             {/* Quick Contact Card */}
             <div className="rounded-3xl border border-primary/30 bg-primary p-8 text-white shadow-xl">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
-                <Sparkles className="h-3.5 w-3.5" /> Direct Consultation
+                <Sparkles className="h-3.5 w-3.5" /> Enterprise Partnership
               </span>
               <h3 className="mt-4 text-2xl font-bold leading-snug">
                 Ready to accelerate with {service.shortTitle}?
               </h3>
               <p className="mt-3 text-sm text-white/85 leading-relaxed">
-                Connect with our Principal Architect or Staffing Director to discuss your exact timeline and tech requirements.
+                Connect with our engineering leadership to discuss your exact delivery roadmap, architecture, and talent pods.
               </p>
               <div className="mt-6 space-y-3">
-                <a
-                  href="tel:+919177111311"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-primary shadow-md hover:bg-white/95 transition-all"
-                >
-                  <Phone className="h-4 w-4" /> Call +91-9177111311
-                </a>
                 <Link
                   to="/contact"
-                  className="flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-3.5 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-all"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-primary shadow-md hover:bg-white/95 transition-all"
                 >
-                  Request a Custom Proposal <ArrowRight className="h-4 w-4" />
+                  Reach Out to Our Team <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>

@@ -634,7 +634,7 @@ function Home() {
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 backdrop-blur-sm px-6 py-2.5 text-xs sm:text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-600 transition-all"
               >
-                <span>Consult an Architect</span>
+                <span>Reach Out to Our Team</span>
               </Link>
             </div>
           </Reveal>
@@ -679,53 +679,6 @@ function Home() {
               );
             })}
           </div>
-
-          {/* Enterprise Architecture Standards Ribbon */}
-          <Reveal className="mt-12">
-            <div className="rounded-2xl border border-blue-100/80 bg-white/90 backdrop-blur-sm p-5 sm:p-6 shadow-card">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
-                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
-                    <ShieldCheck className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-900">Zero-Trust IAM</div>
-                    <div className="text-[11px] text-slate-500">Least privilege role policies</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
-                    <CheckCircle2 className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-900">SOC 2 &amp; ISO Compliance</div>
-                    <div className="text-[11px] text-slate-500">Enterprise audit standards</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
-                    <Rocket className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-900">Multi-Region HA</div>
-                    <div className="text-[11px] text-slate-500">99.99% uptime availability</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
-                    <Zap className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-900">Sub-50ms P99</div>
-                    <div className="text-[11px] text-slate-500">Low-latency API architecture</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 

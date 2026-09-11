@@ -553,7 +553,7 @@ function ExpertisePage() {
                   to="/contact"
                   className="rounded-xl bg-[#38bdf8] hover:bg-[#00a8ff] text-[#030914] px-7 py-3.5 text-sm font-bold shadow-lg shadow-[#38bdf8]/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
                 >
-                  Book Technical Consultation
+                  Reach Out to Our Team
                 </Link>
                 <Link
                   to="/delivery"

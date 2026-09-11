@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 export function CtaBand() {
@@ -22,24 +22,10 @@ export function CtaBand() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/contact"
-              className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-primary transition-all hover:-translate-y-0.5 shadow-lg hover:bg-white/90"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 text-sm md:text-base font-bold text-primary transition-all hover:-translate-y-0.5 shadow-xl hover:bg-white/95"
             >
-              Talk to our team
+              Reach Out to Our Team <ArrowRight className="h-4 w-4" />
             </Link>
-            <a
-              href="tel:+919177111311"
-              className="rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5"
-            >
-              +91-9177111311
-            </a>
-            <a
-              href="https://wa.me/919177111311"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
-            </a>
           </div>
         </Reveal>
       </div>
