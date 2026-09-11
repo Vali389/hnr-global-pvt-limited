@@ -45,6 +45,7 @@ import {
   GitBranch,
 } from "lucide-react";
 import about from "@/assets/about.jpg";
+import aiSolutionsHero from "@/assets/ai-solutions-hero.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { Marquee } from "@/components/site/Marquee";
 import { CtaBand } from "@/components/site/CtaBand";
@@ -70,14 +71,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-// Section 16: Enterprise Credibility & Proof Points
-const stats = [
-  { value: "15+", label: "Years Combined Leadership", detail: "Senior architects and delivery leaders" },
-  { value: "500+", label: "Tech Professionals Placed", detail: "Vetted engineers and talent solutions" },
-  { value: "100+", label: "Enterprise Engagements", detail: "Successful client deliveries" },
-  { value: "95%", label: "Client Retention Rate", detail: "Long-term client partnerships" },
-];
-
 // Section 2: Services — Website Overview (All 8 Services with custom imagery)
 const services = [
   {
@@ -85,7 +78,6 @@ const services = [
     icon: Code2,
     title: "Custom Software Development",
     eyebrow: "ENTERPRISE SOFTWARE & CRM",
-    focus: "Enterprise applications • CRM • ERP • APIs • Automation",
     body: "ERP, CRM, BI dashboards, workflow automation and legacy modernisation built around your business workflows.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
     link: "/services/custom-software-development",
@@ -95,7 +87,6 @@ const services = [
     icon: Boxes,
     title: "Product Engineering",
     eyebrow: "SaaS & CLOUD ARCHITECTURE",
-    focus: "SaaS • MVP • Cloud Native • Platform Engineering",
     body: "MVPs in weeks, full-cycle engineering, optimization and cloud-native architecture on AWS, Azure and GCP.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
     link: "/services/product-engineering",
@@ -105,9 +96,8 @@ const services = [
     icon: Brain,
     title: "AI & Intelligent Solutions",
     eyebrow: "GENERATIVE AI & AUTOMATION",
-    focus: "Enterprise AI Solutions • Automation • Intelligent Systems",
     body: "Helping organizations move from AI experimentation to practical enterprise solutions, RAG assistants, and automation.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    image: aiSolutionsHero,
     link: "/services/ai-intelligent-solutions",
   },
   {
@@ -115,7 +105,6 @@ const services = [
     icon: Cloud,
     title: "Cloud & DevOps",
     eyebrow: "MULTI-CLOUD & KUBERNETES",
-    focus: "AWS • Azure • Google Cloud • Kubernetes • CI/CD",
     body: "Enterprise cloud engineering, multi-region cloud migrations, automated CI/CD pipelines, and FinOps governance.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     link: "/services/cloud-devops",
@@ -125,7 +114,6 @@ const services = [
     icon: Database,
     title: "Data Engineering & Analytics",
     eyebrow: "DATA PLATFORMS & BI",
-    focus: "Data Platforms • Data Engineering • BI • Analytics",
     body: "Modern data foundations, Snowflake/Databricks lakehouses, real-time analytics, and automated Power BI dashboards.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     link: "/services/data-engineering-analytics",
@@ -135,7 +123,6 @@ const services = [
     icon: Smartphone,
     title: "Mobile Engineering",
     eyebrow: "iOS, ANDROID & FLUTTER",
-    focus: "iOS • Android • Flutter • React Native",
     body: "Secure, intuitive and scalable mobile applications across iOS, Android, Flutter and React Native with offline sync.",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
     link: "/services/mobile-engineering",
@@ -145,7 +132,6 @@ const services = [
     icon: Users,
     title: "Technology Talent Solutions",
     eyebrow: "STAFF AUGMENTATION & SQUADS",
-    focus: "Staff Augmentation • RPO • Contract Staffing • Executive Search",
     body: "Permanent hiring, contract staffing, dedicated engineering squads, executive search, and end-to-end recruitment process outsourcing.",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
     link: "/services/technology-talent-solutions",
@@ -155,7 +141,6 @@ const services = [
     icon: RefreshCw,
     title: "Digital Transformation",
     eyebrow: "MODERNIZATION & STRATEGY",
-    focus: "Modernization • Automation • Cloud Transformation • Strategy",
     body: "Modernize legacy systems, automate processes, eliminate technical debt, and establish scalable cloud operating models.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     link: "/services/digital-transformation",
@@ -352,219 +337,292 @@ function Home() {
 
   return (
     <>
-      {/* Hero Section - Full Viewport 100vh */}
-      <section className="relative isolate overflow-hidden min-h-screen flex flex-col items-center justify-center bg-[#06152f]">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <HeroVideoPlaylist className="w-full h-full object-cover object-center brightness-105 contrast-105" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#06152f]/90 via-[#06152f]/40 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#06152f]/80 via-transparent to-transparent pointer-events-none" />
+      {/* ── SECTION 1: HERO SECTION ── */}
+      <section className="relative isolate overflow-hidden min-h-screen flex flex-col justify-between pt-28 pb-10 bg-[#06152F] border-b border-blue-900/40">
+        {/* Ambient Volumetric Glow Blooms */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <HeroVideoPlaylist className="w-full h-full object-cover object-center brightness-105 contrast-105 opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#06152F]/95 via-[#081e42]/85 to-[#002f8a]/80" />
+          <div className="absolute top-1/4 right-[10%] w-[700px] h-[700px] rounded-full bg-[#003BB2]/35 blur-[140px]" />
+          <div className="absolute top-1/3 right-[18%] w-[500px] h-[500px] rounded-full bg-[#0EA5E9]/20 blur-[110px]" />
+          <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-[#003BB2]/20 blur-[130px]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#06152F] via-transparent to-transparent z-10" />
         </div>
 
-        <div className="relative z-10 w-full flex-1 mx-auto max-w-6xl px-6 pt-32 md:pt-40 flex flex-col items-center justify-center text-center">
+        {/* Hero Main Content */}
+        <div className="relative z-20 flex-1 mx-auto max-w-5xl px-6 flex flex-col items-center justify-center text-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 backdrop-blur-md px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sky-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse" />
+            <span className="inline-flex items-center gap-2 mb-4 rounded-full border border-blue-500/35 bg-blue-500/10 backdrop-blur-sm px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-blue-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
               Enterprise Technology &amp; Talent Partner
             </span>
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 tracking-tight text-white select-none">
-              <span className="block font-serif italic font-light text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white/90 mb-1 md:mb-2">
-                Engineering
-              </span>
-              <span className="block font-black tracking-wider uppercase text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white drop-shadow-[0_10px_35px_rgba(0,0,0,0.8)]">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight whitespace-pre-line">
+              Engineering{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400">
                 TOMORROW
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-white/85 leading-relaxed font-normal">
-              Shaping the Future of Technology Through Human-Centric Innovation
+            <p className="mt-5 text-base sm:text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed font-normal">
+              Shaping the future of technology through human-centric innovation, resilient enterprise software, and world-class engineering squads.
             </p>
           </Reveal>
 
-          {/* Dual Split Action Cards - Glass + Gradient */}
-          <Reveal delay={240} className="w-full max-w-3xl mt-8 sm:mt-10">
+          {/* Dual Split Action Cards */}
+          <Reveal delay={240} className="w-full max-w-2xl mt-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 to="/companies"
-                className="group flex flex-col justify-between gap-10 rounded-2xl border border-white/20 bg-white/10 p-5 sm:p-6 backdrop-blur-xl text-left shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/15 relative overflow-hidden"
+                className="group flex flex-col justify-between gap-5 rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-xl text-left shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/15 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 <div className="relative z-10">
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-200 block">
+                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300 block">
                     For Companies
                   </span>
-                  <span className="mt-2 block text-2xl sm:text-[1.7rem] font-light leading-tight text-white transition-colors">
-                    Delivering to Our Client Success
+                  <span className="mt-1.5 block text-lg font-semibold leading-snug text-white transition-colors">
+                    Delivering Client Success &amp; Scale
                   </span>
                 </div>
-                <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/15 border border-white/40 text-white group-hover:bg-white group-hover:text-[#1d4ed8] group-hover:scale-110 shadow-lg transition-all">
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 border border-white/40 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-110 shadow-lg transition-all">
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>
 
               <Link
                 to="/careers"
-                className="group flex flex-col justify-between gap-10 rounded-2xl bg-gradient-to-br from-[#1d4ed8] to-[#3b82f6] hover:from-[#2563eb] hover:to-[#60a5fa] p-5 sm:p-6 text-left shadow-2xl shadow-[#1d4ed8]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[#3b82f6]/40 relative overflow-hidden"
+                className="group flex flex-col justify-between gap-5 rounded-2xl bg-gradient-to-br from-[#1d4ed8] to-[#3b82f6] hover:from-[#2563eb] hover:to-[#60a5fa] p-5 text-left shadow-xl shadow-blue-700/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-blue-500/40 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 <div className="relative z-10">
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-200 block">
+                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200 block">
                     For Job Seekers
                   </span>
-                  <span className="mt-2 block text-2xl sm:text-[1.7rem] font-light leading-tight text-white transition-colors">
-                    Find Your Next Job
+                  <span className="mt-1.5 block text-lg font-semibold leading-snug text-white transition-colors">
+                    Find Your Next Career Breakthrough
                   </span>
                 </div>
-                <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/15 border border-white/40 text-white group-hover:bg-white group-hover:text-[#1d4ed8] group-hover:scale-110 shadow-lg transition-all">
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 border border-white/40 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-110 shadow-lg transition-all">
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>
             </div>
           </Reveal>
         </div>
 
-        {/* Stats Bar overlapping the hero bottom edge */}
-        <div className="relative z-10 w-full mx-auto max-w-6xl px-6 pb-8 md:pb-10">
-          <Reveal delay={320}>
-            <div className="relative rounded-2xl border border-slate-200/70 bg-white/95 backdrop-blur-xl p-6 shadow-[0_24px_60px_-24px_rgba(2,6,23,0.55)] md:p-8">
-              <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#38bdf8]" />
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-                {stats.map((s) => (
-                  <div key={s.label} className="text-center">
-                    <div className="bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] bg-clip-text text-transparent text-3xl md:text-4xl font-black tabular-nums">
-                      {s.value}
-                    </div>
-                    <div className="mt-1 text-xs font-bold uppercase tracking-wider text-[#0f172a]">
-                      {s.label}
-                    </div>
-                    <div className="mt-0.5 text-[11px] font-normal text-slate-500">{s.detail}</div>
+        {/* Floating Trust Metric Bar (ConfigUSA Style) */}
+        <div className="relative z-30 w-full px-4 sm:px-6 lg:px-8 mt-12">
+          <div className="mx-auto max-w-5xl w-full">
+            <div className="relative overflow-hidden rounded-2xl bg-white/95 backdrop-blur-md shadow-elegant ring-1 ring-black/5">
+              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600" />
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 md:divide-x md:divide-slate-200/60">
+                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
+                    <Users className="h-4 w-4" />
+                  </span>
+                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
+                    500+
                   </div>
-                ))}
+                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                    Professionals Placed
+                  </div>
+                </div>
+
+                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
+                    <ShieldCheck className="h-4 w-4" />
+                  </span>
+                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
+                    100+
+                  </div>
+                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                    Happy Clients
+                  </div>
+                </div>
+
+                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
+                    <Layers className="h-4 w-4" />
+                  </span>
+                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
+                    13+
+                  </div>
+                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                    Industries Served
+                  </div>
+                </div>
+
+                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
+                    <CheckCircle2 className="h-4 w-4" />
+                  </span>
+                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
+                    98.4%
+                  </div>
+                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                    Client Retention
+                  </div>
+                </div>
+
+                <div className="group flex flex-col items-center text-center gap-1.5 px-3 py-3.5 transition-colors hover:bg-blue-50/40 col-span-2 sm:col-span-1">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow">
+                    <Rocket className="h-4 w-4" />
+                  </span>
+                  <div className="text-xl md:text-2xl font-black tracking-tight leading-none tabular-nums text-gradient-brand">
+                    24/7
+                  </div>
+                  <div className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                    Global Delivery
+                  </div>
+                </div>
               </div>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 
-      {/* Marquee Banner for Core Technologies */}
-      <section className="border-y border-border bg-[#f1f6fc] py-8">
-        <div className="mx-auto max-w-7xl px-6">
-          <p className="mb-4 text-center text-xs font-bold uppercase tracking-[0.25em] text-primary">
-            Technologies We Build With
+      {/* ── SECTION 2: CLIENT / TECH MARQUEE (ConfigUSA Style) ── */}
+      <section className="bg-gradient-to-r from-[#f8fafc] via-[#edf4fc] to-[#f8fafc] border-b border-blue-100/80 py-8 sm:py-10 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <p className="text-center text-xs sm:text-sm font-extrabold uppercase tracking-[0.28em] text-blue-700 mb-6 sm:mb-8">
+            OUR TECH STACK — ENTERPRISE TECHNOLOGIES WE BUILD WITH
           </p>
           <Marquee items={techStack} subtitle="Core Stack" />
         </div>
       </section>
 
-      {/* ALL 8 ENTERPRISE SERVICES (Section 2) */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <Reveal className="max-w-3xl mx-auto text-center">
-          <p className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-primary">
-            OUR SERVICES
-          </p>
-          <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-            End-to-End Technology &amp; Talent Services
-          </h2>
-          <p className="mt-4 text-base md:text-lg text-foreground/75 leading-relaxed">
-            We combine product engineering discipline with deep talent solutions so you get both the high-performance software and the engineering squads to scale it.
-          </p>
-        </Reveal>
+      {/* ── SECTION 3: ALL 8 SERVICES ("WHAT WE DO" - ConfigUSA Style) ── */}
+      <section className="py-24 bg-gradient-to-b from-[#edf4fc] via-[#f1f6fc] to-[#e4eef9] border-b border-blue-200/50 relative overflow-hidden">
+        {/* Soft Volumetric Background Glows */}
+        <div className="pointer-events-none absolute -top-36 left-1/4 h-96 w-96 rounded-full bg-blue-300/15 blur-[120px]" />
+        <div className="pointer-events-none absolute -bottom-36 right-1/4 h-96 w-96 rounded-full bg-cyan-300/15 blur-[120px]" />
 
-        {/* 8-Card Responsive Grid - 3 cards per row for spacious, clear visibility */}
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 60}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-blue-100 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400/60 hover:shadow-xl">
-                {/* Header Image with overlay */}
-                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
-                  
-                  {/* Top Gradient Accent Line */}
-                  <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#38bdf8] opacity-90 group-hover:opacity-100 transition-opacity" />
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+          <Reveal className="max-w-4xl mx-auto text-center">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+              <span className="h-px w-6 bg-blue-600" />
+              What We Do
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+              End-to-End Capabilities That{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                Drive Outcomes
+              </span>
+            </h2>
+            <p className="mt-3.5 text-xs sm:text-sm md:text-base leading-relaxed text-center text-slate-600 font-medium max-w-2xl mx-auto">
+              From custom enterprise software to Generative AI, cloud DevOps and specialized engineering pods, we build and scale high-impact solutions.
+            </p>
+          </Reveal>
 
-                  {/* Glassmorphic Icon Badge */}
-                  <span className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#1d4ed8]/85 backdrop-blur-md border border-white/30 text-white shadow-lg">
-                    <s.icon className="h-5 w-5" />
-                  </span>
+          {/* 8-Card Responsive Grid */}
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={i * 50}>
+                <Link
+                  to={s.link}
+                  className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-card hover:shadow-[0_24px_48px_rgba(29,78,216,0.14)] hover:border-blue-400/50 hover:-translate-y-2 transition-all duration-300 relative"
+                >
+                  {/* Header Image with Zoom & Dark Gradient */}
+                  <div className="relative h-52 overflow-hidden shrink-0 bg-slate-900">
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-10" />
 
-                  {/* Title Overlay */}
-                  <h3 className="absolute bottom-3 left-4 right-4 text-base font-bold text-white leading-snug drop-shadow-sm">
-                    {s.title}
-                  </h3>
-                </div>
-
-                {/* Card Body */}
-                <div className="flex flex-1 flex-col justify-between p-5">
-                  <div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-primary block">
-                      {s.eyebrow}
+                    {/* Frosted Glass Icon Badge */}
+                    <span className="absolute top-3 left-3 z-20 flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 backdrop-blur-md border border-white/25 text-white group-hover:scale-110 group-hover:bg-white/25 transition-all duration-300 shadow-md">
+                      <s.icon className="h-5 w-5 transition-transform duration-300 group-hover:rotate-6" />
                     </span>
-                    <p className="mt-2 text-xs font-semibold text-foreground/90 leading-tight">
-                      {s.focus}
+
+                    {/* Title Overlay */}
+                    <div className="absolute bottom-4 left-4 right-4 z-10">
+                      <h3 className="font-display text-lg md:text-xl font-bold text-white leading-snug group-hover:text-cyan-200 transition-colors">
+                        {s.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Content Body */}
+                  <div className="flex flex-col flex-1 p-6 pt-5 pb-8">
+                    <p className="text-[0.7rem] font-extrabold uppercase tracking-[0.18em] text-blue-600 mb-2.5 leading-tight">
+                      {s.eyebrow}
                     </p>
-                    <p className="mt-2.5 text-xs leading-relaxed text-foreground/70 line-clamp-3">
+                    <p className="text-sm text-slate-600 leading-relaxed text-justify flex-1 font-medium">
                       {s.body}
                     </p>
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
+                      <span>Explore Service</span>
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1.5" />
+                    </span>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-border/60">
-                    <Link
-                      to={s.link}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-primary transition-all group-hover:gap-2.5"
-                    >
-                      <span>Explore Service</span>
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
+                  {/* Shine Swipe */}
+                  <div className="pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-2xl">
+                    <div className="absolute top-0 left-0 h-full w-1/3 -translate-x-[120%] bg-gradient-to-r from-transparent via-white/25 to-transparent group-hover:animate-shine" />
                   </div>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+
+                  {/* Bottom Accent Brand Line */}
+                  <div className="absolute bottom-0 inset-x-0 h-1.5 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* EXTRA SECTION: Enterprise Delivery Model Roadmap (Section 12) */}
-      <section className="bg-[#f4f8fe] border-y border-border/80 py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-3xl mx-auto">
-            <p className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-primary">
-              DELIVERY FRAMEWORK
+      {/* ── SECTION 4: ENTERPRISE DELIVERY MODEL ROADMAP ── */}
+      <section className="bg-gradient-to-b from-[#f8fafc] via-[#edf4fc] to-[#f8fafc] border-b border-blue-100/70 py-24 relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+          <Reveal className="text-center max-w-4xl mx-auto">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+              <span className="h-px w-6 bg-blue-600" />
+              Delivery Framework
             </p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-              Enterprise Delivery Model: 4 Proven Phases
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+              Enterprise Delivery Model:{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                4 Proven Phases
+              </span>
             </h2>
-            <p className="mt-4 text-base text-foreground/75 leading-relaxed font-normal">
-              A clear delivery framework that guarantees predictability, transparency, and velocity across all client engagements.
+            <p className="mt-3.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
+              A clear agile delivery framework that guarantees predictability, transparency, and velocity across all client engagements.
             </p>
           </Reveal>
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((p, idx) => (
               <Reveal key={p.title} delay={idx * 80}>
-                <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-primary/20 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl">
+                <div className="group relative flex h-full flex-col justify-between rounded-2xl sm:rounded-3xl border border-blue-100/80 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-elegant">
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary font-bold shadow-inner">
+                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 font-bold shadow-xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300">
                         <p.icon className="h-5 w-5" />
                       </span>
+                      <span className="text-xs font-black text-slate-300 font-mono">
+                        {p.step}
+                      </span>
                     </div>
-                    <h3 className="mt-5 text-base font-bold text-foreground">{p.title}</h3>
-                    <p className="mt-1 text-xs font-semibold text-primary">{p.subtitle}</p>
-                    <p className="mt-3 text-xs sm:text-sm leading-relaxed text-foreground/75">
+                    <h3 className="mt-5 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      {p.title}
+                    </h3>
+                    <p className="mt-1 text-xs font-semibold text-blue-600">
+                      {p.subtitle}
+                    </p>
+                    <p className="mt-3 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
                       {p.description}
                     </p>
                   </div>
-                  <div className="mt-5 pt-3 border-t border-border/60 flex items-center gap-2 text-xs font-semibold text-primary">
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> Verified Quality Gate
+                  <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-blue-600">
+                    <CheckCircle2 className="h-4 w-4 text-cyan-500" />
+                    <span>Verified Quality Gate</span>
                   </div>
                 </div>
               </Reveal>
@@ -574,7 +632,7 @@ function Home() {
           <Reveal className="mt-12 text-center">
             <Link
               to="/delivery"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] px-6 py-3 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:from-[#2563eb] hover:to-[#60a5fa] hover:gap-3"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-7 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
             >
               <span>Explore Full Delivery &amp; Governance Model</span>
               <ArrowRight className="h-4 w-4" />
@@ -583,34 +641,38 @@ function Home() {
         </div>
       </section>
 
-      {/* EXTRA SECTION: Technology Expertise Teaser (Section 11) */}
-      <section className="bg-background py-24 border-b border-border">
-        <div className="mx-auto max-w-7xl px-6">
+      {/* ── SECTION 5: FULL-STACK EXPERTISE TEASER ── */}
+      <section className="bg-white py-24 border-b border-blue-100/70 relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-12 items-center">
             {/* Left Column: Heading and CTAs */}
             <div className="lg:col-span-5">
               <Reveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-primary">
-                  FULL-STACK EXPERTISE
+                <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.28em] text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/60 mb-4">
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+                  Full-Stack Expertise
                 </span>
-                <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl text-foreground">
-                  Engineering Depth Across the Modern Stack
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black tracking-tight text-slate-900 leading-tight">
+                  Engineering Depth Across the{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                    Modern Stack
+                  </span>
                 </h2>
-                <p className="mt-4 text-sm sm:text-base text-foreground/75 leading-relaxed font-normal">
+                <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
                   From frontier Generative AI and low-latency microservices to distributed multi-cloud platforms and enterprise databases, our specialized engineering squads build mission-critical solutions.
                 </p>
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <Link
                     to="/expertise"
-                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] px-6 py-3 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:from-[#2563eb] hover:to-[#60a5fa] hover:gap-3"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
                   >
                     <span>View Technology Matrix</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-3 text-xs sm:text-sm font-semibold text-foreground hover:bg-muted transition-all"
+                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-6 py-3.5 text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-all"
                   >
                     <span>Consult an Architect</span>
                   </Link>
@@ -625,14 +687,14 @@ function Home() {
                   const Icon = t.icon;
                   return (
                     <Reveal key={t.domain} delay={idx * 50}>
-                      <div className="rounded-2xl border border-border bg-card p-5 shadow-xs hover:border-primary/50 hover:shadow-md transition-all">
+                      <div className="rounded-2xl border border-blue-100/80 bg-white p-5 shadow-card hover:border-blue-400/60 hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
                         <div className="flex items-center gap-3 mb-2.5">
-                          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                             <Icon className="h-4 w-4" />
                           </span>
-                          <h4 className="text-sm font-bold text-foreground">{t.domain}</h4>
+                          <h4 className="text-sm font-bold text-slate-900">{t.domain}</h4>
                         </div>
-                        <p className="text-xs text-foreground/75 leading-relaxed font-normal">
+                        <p className="text-xs text-slate-600 leading-relaxed font-medium">
                           {t.description}
                         </p>
                       </div>
@@ -645,18 +707,22 @@ function Home() {
         </div>
       </section>
 
-      {/* ALL 13 INDUSTRIES WE SERVE (Section 15) */}
-      <section className="bg-[#eef4fb] py-24 border-b border-border">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-3xl mx-auto">
-            <p className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-primary mb-4">
-              INDUSTRIES WE SERVE
+      {/* ── SECTION 6: ALL 13 INDUSTRIES WE SERVE ── */}
+      <section className="bg-gradient-to-b from-[#edf4fc] via-[#f1f6fc] to-[#e4eef9] py-24 border-b border-blue-200/50 relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+          <Reveal className="text-center max-w-4xl mx-auto">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+              <span className="h-px w-6 bg-blue-600" />
+              Industries We Serve
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-              13 Sector Specializations That Shorten Delivery
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+              13 Sector Specializations That{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                Shorten Delivery
+              </span>
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-foreground/75 leading-relaxed font-normal">
-              Deep domain context across regulated industries, heavy manufacturing, financial platforms, and high-tech SaaS.
+            <p className="mt-3.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
+              Deep domain context across regulated industries, banking platforms, manufacturing operations, and high-tech SaaS.
             </p>
           </Reveal>
 
@@ -664,15 +730,15 @@ function Home() {
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3.5">
             {industries.map((ind, i) => (
               <Reveal key={ind.label} delay={i * 30}>
-                <div className="group flex flex-col items-center justify-between gap-3 rounded-2xl border border-primary/15 bg-card p-4 text-center shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg h-full cursor-default">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <div className="group flex flex-col items-center justify-between gap-3 rounded-2xl border border-blue-100/80 bg-white p-4 text-center shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-elegant h-full cursor-default">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-xs">
                     <ind.icon className="h-5 w-5" />
                   </span>
                   <div>
-                    <span className="text-[10px] font-mono text-primary font-semibold block uppercase">
+                    <span className="text-[10px] font-mono text-blue-600 font-semibold block uppercase">
                       {ind.category}
                     </span>
-                    <p className="mt-1 text-xs font-bold leading-snug text-foreground/90 group-hover:text-foreground transition-colors">
+                    <p className="mt-1 text-xs font-bold leading-snug text-slate-800 group-hover:text-blue-600 transition-colors">
                       {ind.label}
                     </p>
                   </div>
@@ -684,7 +750,7 @@ function Home() {
           <Reveal className="mt-10 text-center">
             <Link
               to="/industries"
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-primary hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-700 hover:gap-3 transition-all"
             >
               <span>Explore All 13 Sector Capabilities &amp; Case Studies</span>
               <ArrowRight className="h-4 w-4" />
@@ -693,17 +759,21 @@ function Home() {
         </div>
       </section>
 
-      {/* EXTRA SECTION: Enterprise Engagement Models (Section 13) */}
-      <section className="bg-background py-24 border-b border-border">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-3xl mx-auto mb-14">
-            <p className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-primary">
-              ENGAGEMENT MODELS
+      {/* ── SECTION 7: FLEXIBLE ENGAGEMENT MODELS ── */}
+      <section className="bg-white py-24 border-b border-blue-100/70 relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <Reveal className="text-center max-w-4xl mx-auto mb-14">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+              <span className="h-px w-6 bg-blue-600" />
+              Engagement Models
             </p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl text-foreground">
-              Flexible Engagement Frameworks
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+              Flexible Engagement Frameworks for{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                Every Need
+              </span>
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-foreground/75 leading-relaxed font-normal">
+            <p className="mt-3.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
               Tailored collaboration structures designed to match your budget, roadmap velocity, and operational governance.
             </p>
           </Reveal>
@@ -711,15 +781,15 @@ function Home() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {engagementModels.map((model, idx) => (
               <Reveal key={model.title} delay={idx * 40}>
-                <div className="group rounded-2xl border border-primary/15 bg-card p-6 shadow-xs transition-all duration-300 hover:border-primary/50 hover:shadow-md h-full flex flex-col justify-between">
+                <div className="group rounded-2xl sm:rounded-3xl border border-blue-100/80 bg-white p-6 shadow-card transition-all duration-300 hover:border-blue-400 hover:shadow-elegant hover:-translate-y-1 h-full flex flex-col justify-between">
                   <div>
-                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors mb-3.5">
-                      <Briefcase className="h-4 w-4" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                      <Briefcase className="h-5 w-5" />
                     </div>
-                    <h3 className="text-sm sm:text-base font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                       {model.title}
                     </h3>
-                    <p className="mt-2 text-xs text-foreground/70 leading-relaxed">
+                    <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
                       {model.desc}
                     </p>
                   </div>
@@ -730,40 +800,45 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE HNR GLOBAL SECTION */}
-      <section className="bg-gradient-to-b from-background via-muted/20 to-background py-24 border-b border-border">
-        <div className="mx-auto max-w-7xl px-6">
+      {/* ── SECTION 8: WHY CHOOSE HNR GLOBAL ("WHO WE ARE") ── */}
+      <section className="py-24 lg:py-28 bg-gradient-to-b from-white via-[#f0f6fe] to-[#e6f1fc] relative overflow-hidden border-b border-blue-100/50">
+        <div className="pointer-events-none absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-blue-400/12 blur-[130px]" />
+        <div className="pointer-events-none absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-cyan-400/10 blur-[130px]" />
+
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
           <div className="grid gap-14 lg:grid-cols-12 items-center">
             {/* Left Column: Visual with floating stat cards (5 cols) */}
             <div className="lg:col-span-5 relative">
               <Reveal>
-                <div className="relative overflow-hidden rounded-3xl border border-primary/20 shadow-2xl bg-card">
-                  <img
-                    src={about}
-                    alt="HNR Global delivery team collaborating"
-                    width={1600}
-                    height={900}
-                    loading="lazy"
-                    className="h-[440px] w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                <div className="relative overflow-hidden rounded-3xl border border-blue-200/80 shadow-elegant bg-white p-3 group">
+                  <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-full">
+                    <img
+                      src={about}
+                      alt="HNR Global delivery team collaborating"
+                      width={1600}
+                      height={900}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
 
-                  {/* Top Floating Badge */}
-                  <div className="absolute top-4 left-4 rounded-xl border border-white/20 bg-slate-950/75 backdrop-blur-md px-4 py-2 text-xs font-semibold text-white shadow-lg flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-[#38bdf8]" />
-                    <span>Hyderabad &amp; Visakhapatnam</span>
-                  </div>
+                    {/* Top Floating Badge */}
+                    <div className="absolute top-4 left-4 rounded-full border border-white/20 bg-slate-950/80 backdrop-blur-md px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-widest text-white shadow-lg flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                      <span>Hyderabad &amp; Visakhapatnam</span>
+                    </div>
 
-                  {/* Bottom Stats Overlay */}
-                  <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-slate-900/85 backdrop-blur-md p-4 text-white shadow-xl">
-                    <div className="grid grid-cols-2 gap-3 divide-x divide-white/10">
-                      <div>
-                        <div className="text-2xl font-black text-[#38bdf8]">99.4%</div>
-                        <div className="text-xs text-slate-300 font-medium">On-Time Sprints</div>
-                      </div>
-                      <div className="pl-3">
-                        <div className="text-2xl font-black text-white">4.9 / 5</div>
-                        <div className="text-xs text-slate-300 font-medium">Client Rating</div>
+                    {/* Bottom Stats Overlay */}
+                    <div className="absolute bottom-4 inset-x-4 z-10 rounded-2xl bg-slate-950/85 backdrop-blur-md p-4 border border-white/15 shadow-2xl text-white">
+                      <div className="grid grid-cols-2 gap-3 divide-x divide-white/15">
+                        <div>
+                          <div className="text-2xl font-black text-cyan-400">99.4%</div>
+                          <div className="text-xs text-white/75 font-medium">On-Time Sprints</div>
+                        </div>
+                        <div className="pl-3">
+                          <div className="text-2xl font-black text-white">4.9 / 5</div>
+                          <div className="text-xs text-white/75 font-medium">Client Rating</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -775,65 +850,81 @@ function Home() {
             <div className="lg:col-span-7">
               <Reveal delay={120}>
                 <div>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-primary">
-                    WHY CHOOSE HNR GLOBAL
+                  <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.28em] text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/60 mb-4">
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+                    Who We Are
                   </span>
-                  <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-foreground">
-                    Dual-city advantage, global delivery standards
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black tracking-tight text-slate-900 leading-tight">
+                    Dual-City Advantage.{" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                      Global Delivery Standards.
+                    </span>
                   </h2>
-                  <p className="mt-4 text-base md:text-lg text-foreground/75 leading-relaxed font-normal">
-                    Operating from Hyderabad (India’s premier IT hub) and Visakhapatnam (emerging tech innovation zone), we combine top-tier engineering talent with operational agility and cost optimization.
+                  <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+                    Operating from Hyderabad (India’s premier IT hub) and Visakhapatnam, we combine top-tier engineering talent with operational agility, continuity, and cost efficiency.
                   </p>
 
                   {/* 4 Feature Cards */}
                   <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                    <div className="group rounded-2xl border border-primary/15 bg-card p-5 shadow-sm transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:-translate-y-0.5">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="group relative overflow-hidden rounded-2xl bg-white p-5 border border-slate-200/90 shadow-card hover:shadow-elegant hover:border-blue-400 hover:-translate-y-1 transition-all duration-300">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 shadow-xs">
                         <MapPin className="h-5 w-5" />
                       </div>
-                      <h4 className="mt-3.5 text-base font-bold text-foreground">Dual-City Talent Synergies</h4>
-                      <p className="mt-2 text-xs leading-relaxed text-foreground/70">
-                        Tier-1 engineering depth with resilient multi-center business continuity and high retention.
+                      <h4 className="mt-3.5 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        Dual-City Talent Synergies
+                      </h4>
+                      <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+                        Tier-1 engineering depth with resilient multi-center business continuity and high talent retention.
                       </p>
+                      <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
 
-                    <div className="group rounded-2xl border border-primary/15 bg-card p-5 shadow-sm transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:-translate-y-0.5">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="group relative overflow-hidden rounded-2xl bg-white p-5 border border-slate-200/90 shadow-card hover:shadow-elegant hover:border-blue-400 hover:-translate-y-1 transition-all duration-300">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 shadow-xs">
                         <CheckCircle2 className="h-5 w-5" />
                       </div>
-                      <h4 className="mt-3.5 text-base font-bold text-foreground">Agile Engineering &amp; QA</h4>
-                      <p className="mt-2 text-xs leading-relaxed text-foreground/70">
-                        Rigorous 2-week development cadences, automated test coverage, and continuous integration.
+                      <h4 className="mt-3.5 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        Agile Engineering &amp; QA
+                      </h4>
+                      <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+                        Rigorous 2-week development cadences, automated test coverage, and continuous integration pipelines.
                       </p>
+                      <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
 
-                    <div className="group rounded-2xl border border-primary/15 bg-card p-5 shadow-sm transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:-translate-y-0.5">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="group relative overflow-hidden rounded-2xl bg-white p-5 border border-slate-200/90 shadow-card hover:shadow-elegant hover:border-blue-400 hover:-translate-y-1 transition-all duration-300">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 shadow-xs">
                         <ShieldCheck className="h-5 w-5" />
                       </div>
-                      <h4 className="mt-3.5 text-base font-bold text-foreground">Security &amp; Governance</h4>
-                      <p className="mt-2 text-xs leading-relaxed text-foreground/70">
+                      <h4 className="mt-3.5 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        Security &amp; Governance
+                      </h4>
+                      <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
                         Bilateral NDA protection, RBAC, zero-trust infrastructure, and strict code review SLAs.
                       </p>
+                      <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
 
-                    <div className="group rounded-2xl border border-primary/15 bg-card p-5 shadow-sm transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:-translate-y-0.5">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="group relative overflow-hidden rounded-2xl bg-white p-5 border border-slate-200/90 shadow-card hover:shadow-elegant hover:border-blue-400 hover:-translate-y-1 transition-all duration-300">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 shadow-xs">
                         <Award className="h-5 w-5" />
                       </div>
-                      <h4 className="mt-3.5 text-base font-bold text-foreground">Senior Architect Delivery</h4>
-                      <p className="mt-2 text-xs leading-relaxed text-foreground/70">
-                        Direct access to principal engineers, transparent tracking, and reliable SLA responsiveness.
+                      <h4 className="mt-3.5 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        Senior Architect Delivery
+                      </h4>
+                      <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+                        Direct access to principal engineers, transparent sprint tracking, and reliable SLA responsiveness.
                       </p>
+                      <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </div>
 
                   <div className="mt-8 flex items-center gap-4">
                     <Link
                       to="/about"
-                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:from-[#2563eb] hover:to-[#60a5fa] hover:gap-3 hover:shadow-lg"
+                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-7 py-3.5 text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all duration-300 hover:scale-105 hover:gap-3"
                     >
-                      <span>About Our Delivery Standards</span>
+                      <span>More About HNR Global</span>
                       <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
@@ -844,48 +935,52 @@ function Home() {
         </div>
       </section>
 
-      {/* SUCCESS STORIES SECTION */}
-      <section className="bg-background py-24 border-b border-border">
-        <div className="relative mx-auto max-w-7xl px-6">
-          <Reveal className="max-w-2xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-primary">
-              SUCCESS STORIES
-            </span>
-            <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-foreground">
-              What Our Clients Say
+      {/* ── SECTION 9: SUCCESS STORIES / TESTIMONIALS ── */}
+      <section className="bg-gradient-to-b from-[#f5f9fe] via-[#edf4fc] to-[#f5f9fe] border-b border-blue-100/70 py-24 relative overflow-hidden">
+        <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
+          <Reveal className="max-w-4xl mx-auto text-center">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+              <span className="h-px w-6 bg-blue-600" />
+              Success Stories
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+              Proven Outcomes for{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                Real Organizations
+              </span>
             </h2>
-            <p className="mt-4 text-base md:text-lg text-foreground/75 leading-relaxed font-normal">
-              Hear from CTOs and engineering directors who rely on HNR Global for software engineering and tech talent.
+            <p className="mt-3.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
+              Hear from CTOs and engineering directors who rely on HNR Global for mission-critical software engineering and tech talent.
             </p>
           </Reveal>
 
-          <div className="relative mt-16">
+          <div className="relative mt-14">
             <div className="grid gap-6 md:grid-cols-3">
               {testimonials.map((t, idx) => (
                 <Reveal key={t.author} delay={idx * 100}>
-                  <div className="relative flex h-full flex-col justify-between rounded-2xl border border-primary/20 bg-card p-7 md:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-xl">
+                  <div className="relative flex h-full flex-col justify-between rounded-3xl border border-blue-100/80 bg-white p-7 md:p-8 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400/60 hover:shadow-elegant">
                     <div>
                       <div className="flex items-center justify-between">
-                        <Quote className="h-8 w-8 text-primary fill-primary/15" />
-                        <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                        <Quote className="h-8 w-8 text-blue-600 fill-blue-50" />
+                        <span className="rounded-full border border-blue-200/80 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                           {t.tag}
                         </span>
                       </div>
 
-                      <p className="mt-5 text-sm md:text-base leading-relaxed text-foreground/80 font-normal">
+                      <p className="mt-5 text-sm md:text-base leading-relaxed text-slate-700 font-medium">
                         "{t.quote}"
                       </p>
                     </div>
 
-                    <div className="mt-8 flex items-center gap-3.5 border-t border-border/80 pt-5">
+                    <div className="mt-8 flex items-center gap-3.5 border-t border-slate-100 pt-5">
                       <img
                         src={t.avatar}
                         alt={t.author}
-                        className="h-12 w-12 rounded-full object-cover border-2 border-primary/20 shadow-sm"
+                        className="h-12 w-12 rounded-full object-cover border-2 border-blue-200 shadow-sm"
                       />
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-base font-bold text-foreground truncate">{t.author}</h4>
-                        <p className="text-xs text-muted-foreground truncate">{t.role}</p>
+                        <h4 className="text-base font-bold text-slate-900 truncate">{t.author}</h4>
+                        <p className="text-xs text-slate-500 truncate font-medium">{t.role}</p>
                       </div>
                     </div>
                   </div>
@@ -896,17 +991,21 @@ function Home() {
         </div>
       </section>
 
-      {/* FAQ SECTION */}
-      <section className="bg-[#f4f8fe] border-t border-border py-24">
-        <div className="mx-auto max-w-4xl px-6">
-          <Reveal className="text-center max-w-2xl mx-auto">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+      {/* ── SECTION 10: FAQ SECTION ── */}
+      <section className="bg-gradient-to-b from-[#f8fafc] via-[#f1f6fc] to-[#f8fafc] border-b border-blue-100/80 py-24 relative overflow-hidden">
+        <div className="mx-auto max-w-4xl px-4 lg:px-8">
+          <Reveal className="text-center max-w-3xl mx-auto">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+              <span className="h-px w-6 bg-blue-600" />
               Got Questions?
             </p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-              Frequently Asked Questions
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+              Clear Answers for{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                Every Partnership
+              </span>
             </h2>
-            <p className="mt-3 text-base text-foreground/75 leading-relaxed">
+            <p className="mt-3.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
               Everything you need to know about partnering with HNR Global PVT LTD.
             </p>
           </Reveal>
@@ -916,21 +1015,21 @@ function Home() {
               const isOpen = openFaq === idx;
               return (
                 <Reveal key={faq.q} delay={idx * 60}>
-                  <div className="rounded-xl border border-border bg-card overflow-hidden transition-colors">
+                  <div className="rounded-2xl border border-blue-100/80 bg-white shadow-card overflow-hidden transition-colors">
                     <button
                       type="button"
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
-                      className="flex w-full items-center justify-between gap-4 p-6 text-left font-bold text-base md:text-lg hover:text-primary transition-colors cursor-pointer"
+                      className="flex w-full items-center justify-between gap-4 p-6 text-left font-bold text-base md:text-lg text-slate-900 hover:text-blue-600 transition-colors cursor-pointer"
                     >
                       <span>{faq.q}</span>
                       <ChevronDown
-                        className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 ${
-                          isOpen ? "rotate-180 text-primary" : ""
+                        className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${
+                          isOpen ? "rotate-180 text-blue-600" : ""
                         }`}
                       />
                     </button>
                     {isOpen && (
-                      <div className="px-6 pb-6 pt-1 text-base text-foreground/75 leading-relaxed border-t border-border/50">
+                      <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 font-medium">
                         {faq.a}
                       </div>
                     )}
@@ -946,3 +1045,4 @@ function Home() {
     </>
   );
 }
+

@@ -18,12 +18,10 @@ import {
   X,
   Send,
   Sparkles,
-  Phone,
-  Mail,
   ShieldCheck,
   AlertCircle,
 } from "lucide-react";
-import heroImg from "@/assets/services-hero-pro.jpg";
+import heroImg from "@/assets/job-hero.jpg";
 import { openings, JobOpening } from "@/data/careersData";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
@@ -175,10 +173,10 @@ function JobDetailPage() {
         <img
           src={heroImg}
           alt={job.title}
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          className="absolute inset-0 h-full w-full object-cover opacity-50 hero-zoom brightness-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030914] via-[#030914]/90 to-[#030914]/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-transparent/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030914]/90 via-[#030914]/55 to-[#030914]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-transparent/30" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
           {/* Breadcrumbs */}
@@ -669,27 +667,6 @@ function JobDetailPage() {
               </button>
             </div>
 
-            {/* Direct HR Connect */}
-            <div className="rounded-3xl border border-border bg-muted/30 p-6 space-y-3">
-              <h4 className="text-sm font-bold text-foreground">Need Assistance?</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Have questions regarding the interview timeline or relocation support? Reach out directly to our HR leadership.
-              </p>
-              <div className="pt-2 space-y-2 text-xs">
-                <a
-                  href="mailto:hr.hnrglobal@gmail.com"
-                  className="flex items-center gap-2 font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  <Mail className="h-4 w-4 text-primary" /> hr.hnrglobal@gmail.com
-                </a>
-                <a
-                  href="tel:+919177111311"
-                  className="flex items-center gap-2 font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  <Phone className="h-4 w-4 text-primary" /> +91-9177111311
-                </a>
-              </div>
-            </div>
 
             {/* Back to Careers List Link */}
             <div>

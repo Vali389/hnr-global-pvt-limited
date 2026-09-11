@@ -36,8 +36,8 @@ export function PageHero({
       ) : (
         <HeroVideoPlaylist className="absolute inset-0 h-full w-full object-cover opacity-90 hero-zoom brightness-105" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#030914]/85 via-[#030914]/65 to-[#030914]/90 pointer-events-none" />
-      <div className="absolute inset-0 bg-radial from-transparent via-transparent to-[#030914]/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#030914]/60 via-[#030914]/35 to-[#030914]/75 pointer-events-none" />
+      <div className="absolute inset-0 bg-radial from-transparent via-transparent to-[#030914]/40 pointer-events-none" />
 
       <div className="relative mx-auto max-w-4xl px-6 pt-36 pb-24 md:pt-44 md:pb-28 w-full flex flex-col items-center text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-950/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300 backdrop-blur-md shadow-md">

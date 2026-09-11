@@ -361,3 +361,52 @@
   background-clip: text;
   color: transparent;
 }
+
+/* ─── ConfigUSA Polish: Shine Swipe Animation ─── */
+@keyframes shine {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+@utility animate-shine {
+  animation: shine 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ─── ConfigUSA Polish: Slow Spin ─── */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* ─── ConfigUSA Polish: Dual-Color Text Gradient ─── */
+@utility text-gradient-brand {
+  background-image: linear-gradient(to right, #1d4ed8, #0ea5e9, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ─── ConfigUSA Polish: Premium Shadows ─── */
+@utility shadow-card {
+  box-shadow: 0 10px 30px -10px rgba(29, 78, 216, 0.12), 0 4px 12px -4px rgba(15, 23, 42, 0.06);
+}
+
+@utility shadow-elegant {
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.14), 0 8px 20px -6px rgba(29, 78, 216, 0.08);
+}
+
+@utility shadow-glow {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.38);
+}

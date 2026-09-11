@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Layers,
   Shield,
+  ShieldCheck,
   Sparkles,
   Zap,
   Phone,
@@ -56,21 +57,14 @@ function ServiceDetailPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Service Hero Banner */}
-      <section className="relative isolate overflow-hidden bg-[#030914] min-h-[460px] md:min-h-[520px] flex items-center border-b border-white/10">
-        <img
-          src={service.heroImage}
-          alt={service.title}
-          onError={(e) => {
-            e.currentTarget.src = defaultHero;
-          }}
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030914] via-[#030914]/90 to-[#030914]/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-transparent/40" />
+      <section className="relative isolate overflow-hidden bg-[#030914] min-h-[500px] md:min-h-[560px] flex items-center border-b border-white/10">
+        {/* Subtle background ambient glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(56,189,248,0.15),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_100%_50%,rgba(29,78,216,0.12),transparent)]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-24 w-full">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-14 md:py-20 w-full">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-white/60 mb-4 uppercase tracking-wider">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-white/60 mb-6 uppercase tracking-wider">
             <Link to="/" className="hover:text-cyan-400 transition-colors">
               Home
             </Link>
@@ -79,37 +73,100 @@ function ServiceDetailPage() {
               Services
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
-            <span className="text-cyan-400">{service.shortTitle}</span>
+            <span className="text-cyan-400 font-bold">{service.shortTitle}</span>
           </nav>
 
-          <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#38bdf8] backdrop-blur-md">
-              {service.eyebrow}
-            </span>
-          </Reveal>
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+            {/* Left Column: Text & CTAs */}
+            <div className="lg:col-span-7">
+              <Reveal>
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#38bdf8] backdrop-blur-md">
+                  {service.eyebrow}
+                </span>
+              </Reveal>
 
-          <Reveal delay={100}>
-            <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl tracking-tight">
-              {service.title}
-            </h1>
-          </Reveal>
+              <Reveal delay={100}>
+                <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                  {service.title}
+                </h1>
+              </Reveal>
 
-          <Reveal delay={200}>
-            <p className="mt-5 text-base sm:text-lg md:text-xl text-[#cbd5e1] leading-relaxed max-w-2xl font-normal">
-              {service.tagline}
-            </p>
-          </Reveal>
+              <Reveal delay={200}>
+                <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+                  {service.tagline}
+                </p>
+              </Reveal>
 
-          <Reveal delay={300}>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm md:text-base font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95"
-              >
-                Start This Project <ArrowRight className="h-4 w-4" />
-              </Link>
+              {/* Core Delivery Highlights */}
+              <Reveal delay={250}>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-200 backdrop-blur-sm">
+                    <ShieldCheck className="h-3.5 w-3.5 text-cyan-400" /> 100% IP &amp; Code Ownership
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-200 backdrop-blur-sm">
+                    <Zap className="h-3.5 w-3.5 text-cyan-400" /> Agile 2-Week Sprints
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-200 backdrop-blur-sm">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-cyan-400" /> Enterprise SLA Governed
+                  </span>
+                </div>
+              </Reveal>
+
+              <Reveal delay={300}>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm md:text-base font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95"
+                  >
+                    Start This Project <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <a
+                    href="tel:+919177111311"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm md:text-base font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-all"
+                  >
+                    <Phone className="h-4 w-4 text-cyan-400" /> Speak With an Architect
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* Right Column: Hero Showcase Image Card */}
+            <div className="lg:col-span-5">
+              <Reveal delay={200}>
+                <div className="relative rounded-3xl border border-white/20 bg-white/[0.04] p-3 shadow-2xl shadow-blue-500/15 backdrop-blur-md group overflow-hidden">
+                  <div className="relative h-[280px] sm:h-[340px] lg:h-[380px] w-full overflow-hidden rounded-2xl bg-slate-900">
+                    <img
+                      src={service.heroImage}
+                      alt={service.title}
+                      onError={(e) => {
+                        e.currentTarget.src = defaultHero;
+                      }}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    
+                    {/* Top Floating Active Badge */}
+                    <div className="absolute top-3.5 right-3.5 flex items-center gap-2 rounded-full bg-slate-950/80 px-3.5 py-1 text-xs font-semibold text-white border border-white/20 backdrop-blur-md shadow-lg">
+                      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>Active Practice</span>
+                    </div>
+
+                    {/* Bottom Caption Overlay */}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-5 text-white">
+                      <span className="text-[11px] font-mono font-bold tracking-widest text-[#38bdf8] block uppercase">
+                        Competency {service.number} • HNR Global
+                      </span>
+                      <p className="text-base font-bold text-white mt-1 leading-snug">
+                        {service.shortTitle} Engineering Pod
+                      </p>
+                      <p className="text-xs text-slate-300 mt-1 line-clamp-1">
+                        {service.tagline}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 

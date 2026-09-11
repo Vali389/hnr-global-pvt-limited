@@ -47,18 +47,22 @@ const officeLocations = [
   {
     city: "Visakhapatnam (Headquarters)",
     badge: "Primary Delivery Center",
-    address: "HNR Global Tech Park, MVP Colony, Visakhapatnam, Andhra Pradesh 530017",
+    address: "DNo. 5-138, 1st street, Near:Postoffice, Simhachalam, Visakhapatnam. 530028.",
     hours: "Mon – Fri: 9:00 AM – 7:30 PM IST",
     phone: "+91-9177111311",
-    email: "info@hnrglobal.in",
+    email: "info@hnrglobal.tech",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=DNo.+5-138,+1st+street,+Near+Postoffice,+Simhachalam,+Visakhapatnam+530028",
+    embedMapUrl: "https://maps.google.com/maps?q=DNo.%205-138,%201st%20street,%20Near%20Postoffice,%20Simhachalam,%20Visakhapatnam%20530028&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {
     city: "Hyderabad Hub",
     badge: "Tech & Talent Center",
-    address: "Hitech City, Cyber Towers Corridor, Madhapur, Hyderabad, Telangana 500081",
+    address: "AR Brindavan Teachers Colony Rd, Raghavendra Colony, Ramachandrapuram, Hyderabad, Telangana 502032",
     hours: "Mon – Fri: 9:30 AM – 7:00 PM IST",
     phone: "+91-9177111311",
-    email: "hyderabad@hnrglobal.in",
+    email: "hr@hnrglobal.tech",
+    mapUrl: "https://maps.app.goo.gl/ZCY9vjFUL5MoPWAX9?g_st=iw",
+    embedMapUrl: "https://maps.google.com/maps?q=AR%20Brindavan%20Teachers%20Colony%20Rd,%20Raghavendra%20Colony,%20Ramachandrapuram,%20Hyderabad,%20Telangana%20502032&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 ];
 
@@ -304,7 +308,7 @@ function Contact() {
                   </a>
 
                   <a
-                    href="mailto:info@hnrglobal.in"
+                    href="mailto:info@hnrglobal.tech"
                     className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-sky-400/50 hover:bg-white/10"
                   >
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400 border border-blue-400/30 group-hover:scale-110 transition-transform">
@@ -312,9 +316,24 @@ function Contact() {
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
-                        Email Inquiry
+                        General &amp; Client Inquiry
                       </p>
-                      <p className="text-base font-bold text-white">info@hnrglobal.in</p>
+                      <p className="text-base font-bold text-white">info@hnrglobal.tech</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:hr@hnrglobal.tech"
+                    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-sky-400/50 hover:bg-white/10"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/20 text-indigo-400 border border-indigo-400/30 group-hover:scale-110 transition-transform">
+                      <Mail className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
+                        Careers &amp; Talent HR
+                      </p>
+                      <p className="text-base font-bold text-white">hr@hnrglobal.tech</p>
                     </div>
                   </a>
 
@@ -416,6 +435,18 @@ function Contact() {
                     <span>{loc.address}</span>
                   </p>
 
+                  {/* Interactive Embedded Google Map */}
+                  <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-muted/40 shadow-inner h-56 sm:h-64 w-full relative">
+                    <iframe
+                      title={`${loc.city} Google Map`}
+                      src={loc.embedMapUrl}
+                      className="h-full w-full border-0"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
+
                   <div className="mt-6 pt-6 border-t border-border/70 flex flex-wrap items-center justify-between gap-4">
                     <a
                       href={`tel:${loc.phone}`}
@@ -428,6 +459,16 @@ function Contact() {
                       className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                     >
                       <Mail className="h-4 w-4" /> {loc.email}
+                    </a>
+                    <a
+                      href={loc.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-xs font-bold text-primary hover:bg-primary hover:text-white transition-all shadow-xs"
+                    >
+                      <MapPin className="h-3.5 w-3.5" />
+                      <span>Open in Google Maps</span>
+                      <ArrowRight className="h-3 w-3" />
                     </a>
                   </div>
                 </div>

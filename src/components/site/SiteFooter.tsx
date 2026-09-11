@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
-import logo from "@/assets/xnr-logo.jpeg";
+import logo from "@/assets/new-logo.jpeg";
 
 export function SiteFooter() {
   return (
@@ -14,7 +14,7 @@ export function SiteFooter() {
               width={140}
               height={48}
               loading="lazy"
-              className="h-12 w-auto object-contain rounded-md bg-white p-1 drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
+              className="h-12 w-auto object-contain rounded-xl shadow-md border border-white/15"
             />
             <div>
               <p className="text-lg font-bold text-white">HNR Global PVT LTD</p>
@@ -60,11 +60,32 @@ export function SiteFooter() {
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-white" />
-              <a href="mailto:hr.hnrglobal@gmail.com">hr.hnrglobal@gmail.com</a>
+              <a href="mailto:info@hnrglobal.tech">info@hnrglobal.tech</a>
             </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 text-white" />
-              <span>Visakhapatnam &amp; Hyderabad, India</span>
+            <li className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-white" />
+              <a href="mailto:hr@hnrglobal.tech">hr@hnrglobal.tech</a>
+            </li>
+            <li className="flex items-start gap-2 pt-1 text-xs text-white/80 leading-relaxed">
+              <MapPin className="mt-0.5 h-4 w-4 text-sky-400 shrink-0" />
+              <div>
+                <strong className="text-white block font-semibold">Visakhapatnam (HQ):</strong>
+                <span>DNo. 5-138, 1st street, Near:Postoffice, Simhachalam, Visakhapatnam 530028</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-2 pt-1 text-xs text-white/80 leading-relaxed">
+              <MapPin className="mt-0.5 h-4 w-4 text-sky-400 shrink-0" />
+              <div>
+                <strong className="text-white block font-semibold">Hyderabad Hub:</strong>
+                <a
+                  href="https://maps.app.goo.gl/ZCY9vjFUL5MoPWAX9?g_st=iw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-sky-300 hover:underline transition-colors"
+                >
+                  AR Brindavan Teachers Colony Rd, Raghavendra Colony, Ramachandrapuram, Hyderabad 502032 ↗
+                </a>
+              </div>
             </li>
           </ul>
         </div>

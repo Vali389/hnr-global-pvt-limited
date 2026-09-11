@@ -16,7 +16,7 @@ import {
   RefreshCw,
   Database,
 } from "lucide-react";
-import heroConfig from "@/assets/services-hero-pro.jpg";
+import heroConfig from "@/assets/services-hero-unique.jpg";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { Marquee } from "@/components/site/Marquee";

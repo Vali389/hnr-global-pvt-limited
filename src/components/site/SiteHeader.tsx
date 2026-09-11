@@ -26,7 +26,7 @@ import {
   Orbit,
   Truck,
 } from "lucide-react";
-import logo from "@/assets/xnr-logo.jpeg";
+import logo from "@/assets/new-logo.jpeg";
 
 const servicesDropdownItems = [
   {
@@ -217,18 +217,18 @@ export function SiteHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#06152f]/95 backdrop-blur-xl transition-all">
+    <header className="sticky top-0 z-50 w-full border-b border-white/15 bg-gradient-to-r from-[#0d4586] via-[#145fae] to-[#0d4586] backdrop-blur-xl transition-all shadow-lg">
       {/* Brand gradient top strip */}
       <div className="h-1 w-full bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#38bdf8]" />
       <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6">
-        {/* Prominent Logo - Increased Width & Height */}
-        <Link to="/" className="flex items-center">
+        {/* Prominent Corporate Logo */}
+        <Link to="/" className="flex items-center py-1 group">
           <img
             src={logo}
             alt="HNR Global PVT LTD"
-            width={280}
+            width={320}
             height={90}
-            className="h-16 md:h-18 lg:h-20 w-auto max-w-[280px] md:max-w-[340px] rounded-lg bg-white p-1.5 object-contain drop-shadow-[0_6px_18px_rgba(29,78,216,0.35)]"
+            className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto rounded-xl shadow-lg border border-white/15 transition-transform duration-200 group-hover:scale-[1.02] object-contain"
           />
         </Link>
 
@@ -463,7 +463,7 @@ export function SiteHeader() {
 
       {/* Mobile Drawer Navigation */}
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-[#06152f] px-6 py-6 lg:hidden max-h-[85vh] overflow-y-auto">
+        <div className="border-t border-white/15 bg-[#0d4586] px-6 py-6 lg:hidden max-h-[85vh] overflow-y-auto">
           <nav className="flex flex-col space-y-3">
             <Link
               to="/"

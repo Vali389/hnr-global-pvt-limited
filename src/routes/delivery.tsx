@@ -15,7 +15,7 @@ import {
   Target,
   FileCheck,
 } from "lucide-react";
-import heroClean from "@/assets/hero-clean.jpg";
+import heroClean from "@/assets/delivery-hero.jpg";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";

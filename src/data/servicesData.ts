@@ -1,9 +1,11 @@
 import heroClean from "@/assets/hero-clean.jpg";
-import servicesHero from "@/assets/services-hero-pro.jpg";
-import heroMesh from "@/assets/hero-mesh.jpg";
-import svcAi from "@/assets/svc-ai.jpg";
-import bgAbout from "@/assets/bg-about.jpg";
-import aboutImg from "@/assets/about.jpg";
+import deliveryHero from "@/assets/delivery-hero.jpg";
+import aiSolutionsHero from "@/assets/ai-solutions-hero.jpg";
+import cloudDevOpsHero from "@/assets/cloud-devops-hero.jpg";
+import dataAnalyticsHero from "@/assets/services-hero-unique.jpg";
+import mobileEngineeringHero from "@/assets/careers-hero.jpg";
+import techTalentHero from "@/assets/job-hero.jpg";
+import digitalTransformationHero from "@/assets/expertise-hero.jpg";
 
 export interface ServiceDetail {
   slug: string;
@@ -159,7 +161,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     shortTitle: "Product Engineering",
     eyebrow: "SaaS • MVP • CLOUD NATIVE • PLATFORMS",
     tagline: "From Product Vision to Production-Ready Platforms",
-    heroImage: servicesHero,
+    heroImage: deliveryHero,
     overview:
       "HNR Global provides full-cycle product engineering services for organizations building new digital products or modernizing existing platforms. Teams can support the lifecycle from product discovery and architecture through engineering, testing, deployment and continuous optimization.",
     capabilities: [
@@ -271,7 +273,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     shortTitle: "AI Solutions",
     eyebrow: "ENTERPRISE AI SOLUTIONS • AUTOMATION",
     tagline: "Turning Artificial Intelligence Into Business Advantage",
-    heroImage: svcAi,
+    heroImage: aiSolutionsHero,
     overview:
       "HNR Global helps organizations move from AI experimentation to practical enterprise solutions. The focus is on measurable use cases such as intelligent search, automation, document intelligence, predictive analytics and enterprise AI assistants.",
     capabilities: [
@@ -381,7 +383,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     shortTitle: "Cloud & DevOps",
     eyebrow: "AWS • AZURE • GOOGLE CLOUD • KUBERNETES • CI/CD",
     tagline: "Cloud Engineering & DevOps for Modern Enterprises",
-    heroImage: servicesHero,
+    heroImage: cloudDevOpsHero,
     overview:
       "HNR Global helps enterprises design, migrate, modernize and operate scalable cloud environments. Cloud and DevOps capabilities are presented as an independent enterprise service, ensuring reliability, speed, and cost efficiency across global workloads.",
     capabilities: [
@@ -490,7 +492,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     shortTitle: "Data & Analytics",
     eyebrow: "DATA PLATFORMS • ETL • BI • ADVANCED ANALYTICS",
     tagline: "Turn Enterprise Data Into Actionable Intelligence",
-    heroImage: heroMesh,
+    heroImage: dataAnalyticsHero,
     overview:
       "HNR Global helps organizations establish modern data foundations that make information accessible, governed and useful for operational and strategic decision-making.",
     capabilities: [
@@ -601,7 +603,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     shortTitle: "Mobile Engineering",
     eyebrow: "iOS • ANDROID • FLUTTER • REACT NATIVE",
     tagline: "Mobile Experiences Designed for the Modern Enterprise",
-    heroImage: heroMesh,
+    heroImage: mobileEngineeringHero,
     overview:
       "HNR Global develops secure, intuitive and scalable mobile applications across iOS, Android and cross-platform environments.",
     capabilities: [
@@ -708,7 +710,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     shortTitle: "Talent Solutions",
     eyebrow: "STAFF AUGMENTATION • RPO • CONTRACT STAFFING • EXECUTIVE SEARCH",
     tagline: "The Right Technology Talent, Aligned to Your Roadmap",
-    heroImage: aboutImg,
+    heroImage: techTalentHero,
     overview:
       "HNR Global combines recruiting expertise with technology understanding to help enterprises acquire, augment and scale specialized engineering teams.",
     capabilities: [
@@ -815,7 +817,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     shortTitle: "Digital Transformation",
     eyebrow: "MODERNIZATION • AUTOMATION • CLOUD TRANSFORMATION • STRATEGY",
     tagline: "Modernize. Optimize. Transform.",
-    heroImage: bgAbout,
+    heroImage: digitalTransformationHero,
     overview:
       "HNR Global helps enterprises modernize technology environments, optimize processes and create scalable digital operating models.",
     capabilities: [
