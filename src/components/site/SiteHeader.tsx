@@ -26,7 +26,7 @@ import {
   Orbit,
   Truck,
 } from "lucide-react";
-import logo from "@/assets/new-logo.jpeg";
+import logo from "@/assets/HNR Image 2.png";
 
 const servicesDropdownItems = [
   {
