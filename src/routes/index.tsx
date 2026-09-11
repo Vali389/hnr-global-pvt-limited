@@ -362,17 +362,17 @@ function Home() {
   return (
     <>
       {/* ── SECTION 1: HERO SECTION ── */}
-      <section className="relative isolate overflow-hidden min-h-[85vh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#060b17] border-b border-slate-800/80">
+      <section className="relative isolate overflow-hidden min-h-[92vh] flex flex-col justify-center pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#060b17] border-b border-slate-800/80">
         {/* Ambient Motion Background & Clean Contrast Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <HeroVideoPlaylist className="w-full h-full object-cover object-center opacity-85" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#060b17]/60 via-[#060b17]/40 to-[#060b17]/80" />
         </div>
 
-        {/* Hero Main Content */}
-        <div className="relative z-20 mx-auto max-w-5xl px-6 flex flex-col items-center justify-center text-center">
+        {/* Hero Main Content (Positioned higher towards top) */}
+        <div className="relative z-20 mx-auto max-w-5xl px-6 flex flex-col items-center text-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2 mb-4 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-blue-300">
+            <span className="inline-flex items-center gap-2 mb-3 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-blue-300">
               <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
               Enterprise Technology &amp; Talent Partner
             </span>
@@ -388,44 +388,44 @@ function Home() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
+            <p className="mt-3.5 text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl leading-relaxed font-normal">
               Shaping the future of technology through human-centric innovation, resilient enterprise software, and world-class engineering squads.
             </p>
           </Reveal>
 
-          {/* Dual Compact Action Cards (Decreased Height & Clean Frosted Glass) */}
-          <Reveal delay={240} className="w-full max-w-2xl mt-7">
+          {/* Dual Compact White Action Cards */}
+          <Reveal delay={240} className="w-full max-w-2xl mt-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <Link
                 to="/companies"
-                className="group flex items-center justify-between gap-4 rounded-xl border border-white/15 bg-white/[0.07] px-4 py-3.5 backdrop-blur-md text-left shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/[0.12]"
+                className="group flex items-center justify-between gap-4 rounded-2xl border border-white/90 bg-white p-4 text-left shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-blue-200"
               >
                 <div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cyan-400 block">
+                  <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-blue-600 block">
                     For Companies
                   </span>
-                  <span className="mt-0.5 block text-sm sm:text-base font-bold text-white leading-snug">
+                  <span className="mt-0.5 block text-sm sm:text-base font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
                     Delivering Client Success &amp; Scale
                   </span>
                 </div>
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-105 shadow-sm transition-all">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white group-hover:bg-blue-700 shadow-md transition-all">
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </div>
               </Link>
 
               <Link
                 to="/careers"
-                className="group flex items-center justify-between gap-4 rounded-xl border border-white/15 bg-white/[0.07] px-4 py-3.5 backdrop-blur-md text-left shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/[0.12]"
+                className="group flex items-center justify-between gap-4 rounded-2xl border border-white/90 bg-white p-4 text-left shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-200"
               >
                 <div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cyan-300 block">
+                  <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cyan-600 block">
                     For Job Seekers
                   </span>
-                  <span className="mt-0.5 block text-sm sm:text-base font-bold text-white leading-snug">
+                  <span className="mt-0.5 block text-sm sm:text-base font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
                     Find Your Next Career Breakthrough
                   </span>
                 </div>
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white group-hover:bg-white group-hover:text-blue-700 group-hover:scale-105 shadow-sm transition-all">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white group-hover:bg-blue-700 shadow-md transition-all">
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </div>
               </Link>
