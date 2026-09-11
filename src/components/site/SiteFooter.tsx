@@ -70,7 +70,14 @@ export function SiteFooter() {
               <MapPin className="mt-0.5 h-4 w-4 text-sky-400 shrink-0" />
               <div>
                 <strong className="text-white block font-semibold">Visakhapatnam (HQ):</strong>
-                <span>DNo. 5-138, 1st street, Near:Postoffice, Simhachalam, Visakhapatnam 530028</span>
+                <a
+                  href="https://maps.app.goo.gl/odJ32fdL9ChEiUGE7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-sky-300 hover:underline transition-colors"
+                >
+                  DNo. 5-138, 1st street, Near:Postoffice, Simhachalam, Visakhapatnam 530028 ↗
+                </a>
               </div>
             </li>
             <li className="flex items-start gap-2 pt-1 text-xs text-white/80 leading-relaxed">

@@ -51,7 +51,7 @@ const officeLocations = [
     hours: "Mon – Fri: 9:00 AM – 7:30 PM IST",
     phone: "+91-9177111311",
     email: "info@hnrglobal.tech",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=DNo.+5-138,+1st+street,+Near+Postoffice,+Simhachalam,+Visakhapatnam+530028",
+    mapUrl: "https://maps.app.goo.gl/odJ32fdL9ChEiUGE7",
     embedMapUrl: "https://maps.google.com/maps?q=DNo.%205-138,%201st%20street,%20Near%20Postoffice,%20Simhachalam,%20Visakhapatnam%20530028&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   {

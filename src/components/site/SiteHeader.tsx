@@ -81,6 +81,12 @@ const servicesDropdownItems = [
 
 const industriesDropdownItems = [
   {
+    id: "cloud-it-services",
+    title: "Cloud & IT Services",
+    desc: "Managed IT & SaaS systems",
+    icon: Cloud,
+  },
+  {
     id: "banking-capital-markets",
     title: "Banking & Capital Markets",
     desc: "Core banking & fintech",
@@ -151,12 +157,6 @@ const industriesDropdownItems = [
     title: "Space & Aerospace Tech",
     desc: "Satellite & flight systems",
     icon: Orbit,
-  },
-  {
-    id: "cloud-it-services",
-    title: "Cloud & IT Services",
-    desc: "Managed IT & SaaS systems",
-    icon: Cloud,
   },
 ];
 

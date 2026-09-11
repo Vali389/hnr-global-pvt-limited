@@ -63,6 +63,16 @@ export const Route = createFileRoute("/industries")({
 
 const sectors = [
   {
+    id: "cloud-it-services",
+    icon: Cloud,
+    title: "Cloud & IT Services",
+    category: "tech",
+    body:
+      "Multi-cloud migrations, enterprise SaaS platform engineering, FinOps cloud cost governance and managed infrastructure services for technology enterprises.",
+    badge: "Enterprise IT",
+    tags: ["Cloud Migration", "Managed IT", "FinOps", "Multi-Cloud"],
+  },
+  {
     id: "banking-capital-markets",
     icon: Landmark,
     title: "Banking & Capital Markets",
@@ -181,16 +191,6 @@ const sectors = [
       "Ground control systems, satellite telemetry processing, mission planning software and data pipelines for space agencies and new-space startups.",
     badge: "Aerospace",
     tags: ["Ground Station", "Telemetry Pipelines", "Flight Software", "Mission Planning"],
-  },
-  {
-    id: "cloud-it-services",
-    icon: Cloud,
-    title: "Cloud & IT Services",
-    category: "tech",
-    body:
-      "Multi-cloud migrations, enterprise SaaS platform engineering, FinOps cloud cost governance and managed infrastructure services for technology enterprises.",
-    badge: "Enterprise IT",
-    tags: ["Cloud Migration", "Managed IT", "FinOps", "Multi-Cloud"],
   },
 ];
 
