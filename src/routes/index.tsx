@@ -603,60 +603,55 @@ function Home() {
       </section>
 
       {/* ── SECTION 4: ENTERPRISE DELIVERY MODEL ROADMAP ── */}
-      <section className="bg-gradient-to-b from-[#f8fafc] via-[#edf4fc] to-[#f8fafc] border-b border-blue-100/70 py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-b from-[#f8fafc] via-[#edf4fc] to-[#f8fafc] border-b border-blue-100/70 py-16 sm:py-20 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
-          <Reveal className="text-center max-w-3xl mx-auto">
-            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-3 flex items-center gap-2 justify-center text-blue-700">
+          <Reveal className="text-center max-w-4xl mx-auto">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-2.5 flex items-center gap-2 justify-center text-blue-700">
               <span className="h-px w-6 bg-blue-600" />
               Delivery Framework
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[2.2rem] font-black leading-tight tracking-tight text-slate-900">
               Enterprise Delivery Model:{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
                 4 Proven Phases
               </span>
             </h2>
-            <p className="mt-2.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-xl mx-auto">
+            <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 font-medium max-w-3xl mx-auto">
               Structured stage-gates with verifiable milestones, guaranteeing predictability, zero scope drift, and rapid velocity.
             </p>
           </Reveal>
 
           {/* Stepper Grid with Connector Line Between Cards */}
-          <div className="mt-12 relative">
+          <div className="mt-10 relative">
             {/* Horizontal Stepper Connecting Line across cards (Desktop) */}
-            <div className="hidden lg:block absolute top-9 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 z-0 opacity-40" />
+            <div className="hidden lg:block absolute top-8 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 z-0 opacity-40" />
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 relative z-10">
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 relative z-10">
               {processSteps.map((p, idx) => (
-                <Reveal key={p.title} delay={idx * 70}>
-                  <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-blue-100/80 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-elegant">
+                <Reveal key={p.title} delay={idx * 60}>
+                  <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-blue-100/90 bg-gradient-to-br from-white via-white to-blue-50/50 p-4 sm:p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/70 hover:shadow-elegant">
                     <div>
                       <div className="flex items-center justify-between">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 font-bold shadow-xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 ring-4 ring-white">
-                          <p.icon className="h-5 w-5" />
+                        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-blue-600 font-bold shadow-xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 ring-2 ring-white">
+                          <p.icon className="h-4 w-4" />
                         </span>
-                        <div className="flex items-center gap-1.5">
-                          <span className="text-[11px] font-black text-blue-700 font-mono px-2 py-0.5 rounded-md bg-blue-50 border border-blue-100">
-                            Phase {p.step}
-                          </span>
-                        </div>
                       </div>
 
-                      <h3 className="mt-4 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      <h3 className="mt-3 text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                         {p.title}
                       </h3>
                       <p className="mt-0.5 text-xs font-semibold text-blue-600">
                         {p.subtitle}
                       </p>
-                      <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+                      <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium line-clamp-3">
                         {p.description}
                       </p>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                    <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-600">
                       <div className="flex items-center gap-1.5">
                         <CheckCircle2 className="h-3.5 w-3.5 text-cyan-500 shrink-0" />
-                        <span className="truncate">Quality Gate Passed</span>
+                        <span className="truncate text-[11px]">Quality Gate Passed</span>
                       </div>
                       {idx < processSteps.length - 1 && (
                         <ArrowRight className="hidden lg:block h-3.5 w-3.5 text-blue-400 opacity-60 group-hover:translate-x-1 transition-transform" />
@@ -668,10 +663,10 @@ function Home() {
             </div>
           </div>
 
-          <Reveal className="mt-10 text-center">
+          <Reveal className="mt-8 text-center">
             <Link
               to="/delivery"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-7 py-3 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-2.5 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
             >
               <span>Explore Full Delivery &amp; Governance Model</span>
               <ArrowRight className="h-4 w-4" />
@@ -688,101 +683,71 @@ function Home() {
 
         <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
           {/* Section Header */}
-          <Reveal className="text-center max-w-3xl mx-auto mb-14">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.28em] text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/60 mb-4">
+          <Reveal className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.28em] text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/60 mb-3">
               <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse" />
               Full-Stack Expertise
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black tracking-tight text-slate-900 leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 leading-tight">
               Engineering Depth Across the{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
                 Modern Stack
               </span>
             </h2>
-            <p className="mt-3 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
-              Specialized engineering squads building mission-critical solutions across frontier AI, distributed microservices, multi-cloud DevOps, and real-time data pipelines.
+            <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 font-medium max-w-3xl mx-auto">
+              Specialized engineering squads building mission-critical solutions across frontier AI, microservices, and modern cloud platforms.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3.5">
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
               <Link
                 to="/expertise"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-2.5 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
               >
                 <span>Explore Full Technology Matrix</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 backdrop-blur-sm px-6 py-3 text-xs sm:text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-600 transition-all"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 backdrop-blur-sm px-6 py-2.5 text-xs sm:text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-600 transition-all"
               >
                 <span>Consult an Architect</span>
               </Link>
             </div>
           </Reveal>
 
-          {/* 6 Architectural Domain Cards */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* 6 Sleek Architectural Domain Cards */}
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {techHighlights.map((t, idx) => {
               const Icon = t.icon;
               return (
-                <Reveal key={t.domain} delay={idx * 60}>
-                  <div className="group relative flex h-full flex-col justify-between rounded-2xl sm:rounded-3xl border border-blue-100/80 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400/70 hover:shadow-elegant overflow-hidden">
+                <Reveal key={t.domain} delay={idx * 50}>
+                  <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-blue-100/90 bg-gradient-to-br from-white via-white to-blue-50/50 p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/70 hover:shadow-elegant overflow-hidden">
                     {/* Top gradient accent line */}
                     <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     <div>
-                      {/* Domain Header */}
-                      <div className="flex items-center justify-between">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-2xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white group-hover:border-transparent transition-all duration-300">
-                          <Icon className="h-5 w-5" />
-                        </span>
-                        <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
-                          Domain {t.step}
-                        </span>
-                      </div>
-
-                      <h3 className="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                        {t.domain}
-                      </h3>
-                      <p className="text-xs font-semibold text-cyan-600 mt-0.5">
-                        {t.tagline}
-                      </p>
-
-                      <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
-                        {t.description}
-                      </p>
-
-                      {/* Tech Badges Cluster */}
-                      <div className="mt-4 pt-3.5 border-t border-slate-100">
-                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block mb-2">
-                          Core Technologies
-                        </span>
-                        <div className="flex flex-wrap gap-1.5">
-                          {t.techStack.map((tech) => (
-                            <span
-                              key={tech}
-                              className="px-2 py-0.5 rounded-md text-[11px] font-mono font-medium bg-slate-50 text-slate-700 border border-slate-200/70 group-hover:border-blue-300/70 group-hover:bg-blue-50/50 group-hover:text-blue-700 transition-colors"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Card Footer: Benchmark Badge & Link */}
-                    <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                      <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-cyan-500 shrink-0" />
-                        <span>{t.badge}</span>
+                      {/* Icon */}
+                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-2xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        <Icon className="h-5 w-5" />
                       </span>
 
+                      <h3 className="mt-3.5 text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        {t.domain}
+                      </h3>
+
+                      <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+                        {t.description}
+                      </p>
+                    </div>
+
+                    {/* Card Footer: Details Link */}
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-end">
                       <Link
                         to="/expertise"
-                        className="inline-flex items-center gap-1 font-bold text-blue-600 hover:text-blue-800 text-xs transition-colors"
+                        className="inline-flex items-center gap-1 font-bold text-blue-600 hover:text-blue-800 text-xs sm:text-sm transition-all group-hover:gap-1.5"
                       >
                         <span>Details</span>
-                        <ChevronRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                        <ChevronRight className="h-4 w-4" />
                       </Link>
                     </div>
                   </div>
@@ -893,20 +858,20 @@ function Home() {
       </section>
 
       {/* ── SECTION 7: FLEXIBLE ENGAGEMENT MODELS ── */}
-      <section className="bg-white py-24 border-b border-blue-100/70 relative overflow-hidden">
+      <section className="bg-white py-20 border-b border-blue-100/70 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <Reveal className="text-center max-w-4xl mx-auto mb-14">
-            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-4 flex items-center gap-2 justify-center text-blue-700">
+          <Reveal className="text-center max-w-4xl mx-auto mb-12">
+            <p className="text-[0.75rem] font-extrabold uppercase tracking-[0.3em] mb-2.5 flex items-center gap-2 justify-center text-blue-700">
               <span className="h-px w-6 bg-blue-600" />
               Engagement Models
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black leading-tight tracking-tight text-slate-900">
               Flexible Engagement Frameworks for{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
                 Every Need
               </span>
             </h2>
-            <p className="mt-3.5 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
+            <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 font-medium max-w-3xl mx-auto">
               Tailored collaboration structures designed to match your budget, roadmap velocity, and operational governance.
             </p>
           </Reveal>
