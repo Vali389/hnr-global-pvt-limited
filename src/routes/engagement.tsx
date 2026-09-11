@@ -169,8 +169,8 @@ function Engagement() {
     <>
       <PageHero
         eyebrow="Engagement Models"
-        title="Flexible partnership models designed around your goals"
-        subtitle="Whether you need a dedicated engineering team, staff augmentation, project-based delivery, or enterprise digital transformation — we adapt to your cadence."
+        title="Flexible Partnership Models Designed Around Your Goals"
+        subtitle="Dedicated engineering pods, staff augmentation, and turnkey project delivery adapted to your cadence."
         bgImage={heroMesh}
       />
 

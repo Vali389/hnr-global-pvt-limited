@@ -110,8 +110,8 @@ function Contact() {
       {/* Hero */}
       <PageHero
         eyebrow="Contact & Collaboration"
-        title="Let's build something extraordinary together"
-        subtitle="Have a new product idea, legacy transformation requirement, or talent need? Connect with our engineering leaders in Visakhapatnam and Hyderabad."
+        title="Let's Build Something Extraordinary Together"
+        subtitle="Connect with our engineering leaders in Visakhapatnam and Hyderabad for custom solutions and talent."
         bgImage={bgContact}
       />
 

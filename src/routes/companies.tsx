@@ -139,8 +139,8 @@ function CompaniesPage() {
       {/* Hero Section */}
       <PageHero
         eyebrow="FOR COMPANIES & ENTERPRISES"
-        title="Delivering to Our Client Success"
-        subtitle="Shaping the future of technology through human-centric innovation, specialized talent solutions, and high-performance engineering partnerships."
+        title="Delivering Client Success & Scale"
+        subtitle="Human-centric innovation, specialized talent solutions, and high-performance engineering squads."
         bgImage={heroImg}
       />
 

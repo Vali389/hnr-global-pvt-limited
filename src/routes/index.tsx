@@ -362,7 +362,7 @@ function Home() {
   return (
     <>
       {/* ── SECTION 1: HERO SECTION ── */}
-      <section className="relative isolate overflow-hidden min-h-[92vh] flex flex-col justify-center pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#060b17] border-b border-slate-800/80">
+      <section className="relative isolate overflow-hidden min-h-[92vh] flex flex-col justify-center pt-6 pb-20 sm:pt-10 sm:pb-24 bg-[#060b17] border-b border-slate-800/80">
         {/* Ambient Motion Background & Clean Contrast Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <HeroVideoPlaylist className="w-full h-full object-cover object-center opacity-85" />
@@ -370,9 +370,9 @@ function Home() {
         </div>
 
         {/* Hero Main Content (Positioned higher towards top) */}
-        <div className="relative z-20 mx-auto max-w-5xl px-6 flex flex-col items-center text-center">
+        <div className="relative z-20 mx-auto max-w-5xl px-6 flex flex-col items-center text-center -mt-12 sm:-mt-16 md:-mt-20">
           <Reveal>
-            <span className="inline-flex items-center gap-2 mb-3 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-blue-300">
+            <span className="inline-flex items-center gap-2 mb-3 sm:mb-4 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-blue-300 shadow-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
               Enterprise Technology &amp; Talent Partner
             </span>
@@ -388,13 +388,13 @@ function Home() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-3.5 text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl leading-relaxed font-normal">
-              Shaping the future of technology through human-centric innovation, resilient enterprise software, and world-class engineering squads.
+            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-slate-100 max-w-4xl mx-auto font-normal whitespace-normal sm:whitespace-nowrap drop-shadow-sm">
+              Human-centric innovation, resilient enterprise software, and world-class engineering squads.
             </p>
           </Reveal>
 
           {/* Dual Compact White Action Cards */}
-          <Reveal delay={240} className="w-full max-w-2xl mt-6">
+          <Reveal delay={240} className="w-full max-w-2xl mt-8 sm:mt-10 md:mt-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <Link
                 to="/companies"
@@ -456,14 +456,14 @@ function Home() {
               <span className="h-px w-6 bg-blue-600" />
               What We Do
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black leading-tight tracking-tight text-slate-900">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[2.15rem] font-black leading-tight tracking-tight text-slate-900 text-center whitespace-normal sm:whitespace-nowrap">
               End-to-End Capabilities That{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
                 Drive Outcomes
               </span>
             </h2>
-            <p className="mt-3.5 text-xs sm:text-sm md:text-base leading-relaxed text-center text-slate-600 font-medium max-w-2xl mx-auto">
-              From custom enterprise software to Generative AI, cloud DevOps and specialized engineering pods, we build and scale high-impact solutions.
+            <p className="mt-3 text-xs sm:text-sm md:text-base leading-relaxed text-center text-slate-600 font-medium max-w-3xl mx-auto whitespace-normal sm:whitespace-nowrap">
+              From custom software to GenAI and cloud DevOps, we build and scale high-impact enterprise solutions.
             </p>
           </Reveal>
 

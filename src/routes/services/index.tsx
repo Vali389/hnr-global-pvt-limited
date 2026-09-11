@@ -71,7 +71,7 @@ function ServicesPage() {
       <PageHero
         eyebrow="ENTERPRISE SERVICES"
         title="High-Impact Technology Solutions Built Around Your Business"
-        subtitle="From bespoke custom software and AI to cloud architecture, data platforms, and technology talent — delivered by one accountable global partner."
+        subtitle="Custom software, product engineering, AI solutions, cloud DevOps, and elite engineering talent."
         bgImage={heroConfig}
       />
 

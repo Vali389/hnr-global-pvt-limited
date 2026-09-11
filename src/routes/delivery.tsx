@@ -151,8 +151,8 @@ function DeliveryModelPage() {
     <div className="bg-background text-foreground">
       <PageHero
         eyebrow="ENTERPRISE DELIVERY FRAMEWORK"
-        title="Predictable Delivery. Transparent Governance. Engineering Discipline."
-        subtitle="Our 4-phase enterprise framework builds confidence with global enterprise buyers, providing clear operational visibility from day one."
+        title="Predictable Delivery, Transparent Governance & Engineering Discipline"
+        subtitle="Our 4-phase enterprise framework provides clear operational visibility and disciplined delivery from day one."
         bgImage={heroClean}
       />
 

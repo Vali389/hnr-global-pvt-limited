@@ -425,14 +425,17 @@ function Industries() {
           </Reveal>
 
           <Reveal delay={100}>
-            <h1 className="mt-4 text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight max-w-4xl tracking-tight drop-shadow-md">
-              Sector depth that shortens your digital transformation
+            <h1 className="mt-4 text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-md whitespace-normal md:whitespace-nowrap">
+              Sector Depth That Shortens Your{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400">
+                Transformation
+              </span>
             </h1>
           </Reveal>
 
           <Reveal delay={200}>
-            <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed max-w-2xl font-normal drop-shadow-sm">
-              We bring pre-built domain accelerators, battle-tested compliance patterns, and industry-savvy engineers across 13+ verticals — so you spend less time educating us and more time shipping.
+            <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-100 leading-relaxed max-w-4xl font-normal drop-shadow-sm whitespace-normal md:whitespace-nowrap">
+              Pre-built domain accelerators and battle-tested compliance patterns across 13+ global enterprise verticals.
             </p>
           </Reveal>
 

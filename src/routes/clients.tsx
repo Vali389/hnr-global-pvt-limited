@@ -116,8 +116,8 @@ function Clients() {
     <>
       <PageHero
         eyebrow="Our Clients"
-        title="Trusted by enterprises across 13+ sectors"
-        subtitle="We measure success by our clients' outcomes — not just deliverables. A 95% retention rate is our strongest proof point."
+        title="Trusted by Global Enterprises Across 13+ Sectors"
+        subtitle="Measuring success through tangible business outcomes, delivery velocity, and enduring client trust."
         bgImage={heroImg}
       />
 

@@ -103,8 +103,8 @@ function About() {
     <>
       <PageHero
         eyebrow="About Us"
-        title="Bringing unique solutions to life with people & processes"
-        subtitle="A trusted partner for companies seeking cutting-edge software solutions and top-tier tech talent — powered by a people-first principle."
+        title="Bringing Unique Solutions to Life with People & Processes"
+        subtitle="A trusted enterprise partner for resilient software solutions and top-tier engineering talent."
         bgImage={bgAbout}
       />
 

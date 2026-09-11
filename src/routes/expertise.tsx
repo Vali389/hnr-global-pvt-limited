@@ -331,7 +331,7 @@ function ExpertisePage() {
       <PageHero
         eyebrow="Technology Expertise"
         title="Engineering Depth Across the Modern Enterprise Stack"
-        subtitle="Full-stack engineering capabilities, verified technologies, resilient systems architecture, and enterprise governance designed for multinational scale."
+        subtitle="Full-stack engineering capabilities, resilient cloud architectures, and disciplined enterprise governance."
         bgImage={heroClean}
       />
 

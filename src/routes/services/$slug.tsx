@@ -86,13 +86,16 @@ function ServiceDetailPage() {
               </Reveal>
 
               <Reveal delay={100}>
-                <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
-                  {service.title}
+                <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight whitespace-normal md:whitespace-nowrap">
+                  <span className="text-white">{service.title.split(" ").slice(0, -1).join(" ")} </span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400">
+                    {service.title.split(" ").slice(-1).join(" ")}
+                  </span>
                 </h1>
               </Reveal>
 
               <Reveal delay={200}>
-                <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+                <p className="mt-3.5 text-sm sm:text-base md:text-lg text-slate-100 leading-relaxed max-w-3xl font-normal whitespace-normal md:whitespace-nowrap">
                   {service.tagline}
                 </p>
               </Reveal>

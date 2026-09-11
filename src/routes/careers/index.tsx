@@ -220,7 +220,7 @@ function CareersPage() {
       <PageHero
         eyebrow="ENGINEERING CAREERS"
         title="Build Mission-Critical Platforms with Global Impact"
-        subtitle="Join our specialized engineering pods across Visakhapatnam, Hyderabad, and remote setups. Work on scalable enterprise architectures, cutting-edge AI, and high-velocity product teams."
+        subtitle="Join specialized engineering pods working on scalable enterprise architectures and modern AI."
         bgImage={heroImg}
       />
 
