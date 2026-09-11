@@ -449,24 +449,12 @@ function Contact() {
                     />
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-border/70 flex flex-wrap items-center justify-between gap-4">
-                    <a
-                      href={`tel:${loc.phone}`}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
-                    >
-                      <Phone className="h-4 w-4 text-primary" /> {loc.phone}
-                    </a>
-                    <a
-                      href={`mailto:${loc.email}`}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-                    >
-                      <Mail className="h-4 w-4" /> {loc.email}
-                    </a>
+                  <div className="mt-6 pt-5 border-t border-border/70 flex items-center justify-end">
                     <a
                       href={loc.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-xl border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-xs font-bold text-primary hover:bg-primary hover:text-white transition-all shadow-xs"
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary hover:bg-primary hover:text-white transition-all shadow-xs"
                     >
                       <MapPin className="h-3.5 w-3.5" />
                       <span>Open in Google Maps</span>
