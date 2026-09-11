@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
-import logo from "@/assets/HNR Image 2.png";
+import logo from "@/assets/xnr-logo.jpeg";
 
 export function SiteFooter() {
   return (
