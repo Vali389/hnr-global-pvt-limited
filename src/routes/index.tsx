@@ -215,37 +215,61 @@ const engagementModels = [
   },
 ];
 
-// Section 11: Technology Stack Highlights for Teaser
+// Section 11: Technology Stack Highlights for Full-Stack Expertise
 const techHighlights = [
   {
-    domain: "AI & Data",
+    step: "01",
+    domain: "AI & Data Intelligence",
+    tagline: "Enterprise GenAI & Cloud Lakehouses",
     icon: Brain,
-    description: "Enterprise Generative AI, RAG knowledge retrieval, predictive machine learning models, and modern cloud data lakehouses.",
+    description: "Enterprise Generative AI agents, RAG knowledge retrieval systems, and predictive ML models integrated with modern cloud data platforms.",
+    techStack: ["OpenAI / Claude", "PyTorch", "LangChain", "Databricks", "Pinecone", "Python"],
+    badge: "99.4% Accuracy SLA",
   },
   {
+    step: "02",
     domain: "Application Engineering",
+    tagline: "Resilient Microservices & Core APIs",
     icon: Code2,
-    description: "High-concurrency microservices, enterprise ERP and CRM platforms, and secure transaction workflows with low-latency APIs.",
+    description: "High-concurrency distributed microservices, event-driven backends, and low-latency API gateways built for enterprise transaction volumes.",
+    techStack: ["Node.js", "Go", "Java / Spring", "GraphQL", "gRPC", "NestJS"],
+    badge: "<40ms API Latency",
   },
   {
-    domain: "Frontend Engineering",
+    step: "03",
+    domain: "Frontend Architecture",
+    tagline: "Modern UI & Scalable Design Systems",
     icon: Layers,
-    description: "High-performance responsive web applications, component design systems, and fast server-rendered customer portals.",
+    description: "Ultra-fast server-rendered web applications, accessible component design systems, and real-time interactive business dashboards.",
+    techStack: ["React 19", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "TanStack"],
+    badge: "100/100 Lighthouse Score",
   },
   {
-    domain: "Mobile Engineering",
-    icon: Smartphone,
-    description: "Native iOS and Android alongside Flutter and React Native cross-platform apps with offline sync and biometric security.",
-  },
-  {
-    domain: "Cloud & DevOps",
+    step: "04",
+    domain: "Cloud, DevOps & SRE",
+    tagline: "Multi-Cloud Infrastructure & CI/CD",
     icon: Cloud,
-    description: "Multi-region cloud infrastructure, automated GitOps CI/CD delivery pipelines, and Kubernetes container management.",
+    description: "Automated GitOps pipelines, zero-downtime canary deployments, and container orchestration across AWS, Azure, and Google Cloud.",
+    techStack: ["AWS", "Azure", "Kubernetes", "Docker", "Terraform", "GitHub Actions"],
+    badge: "99.99% Availability",
   },
   {
-    domain: "Databases & Integration",
+    step: "05",
+    domain: "Mobile Engineering",
+    tagline: "Native iOS, Android & Cross-Platform",
+    icon: Smartphone,
+    description: "Secure, offline-first mobile applications with biometric authentication, background synchronization, and native device capabilities.",
+    techStack: ["Flutter", "React Native", "Swift / iOS", "Kotlin", "SQLite", "Firebase"],
+    badge: "Cross-Platform Parity",
+  },
+  {
+    step: "06",
+    domain: "Databases & Streaming",
+    tagline: "Event Streaming & Distributed Stores",
     icon: Database,
-    description: "Mission-critical relational and document databases, distributed Kafka event streams, and enterprise API gateways.",
+    description: "Mission-critical relational and NoSQL databases, distributed Apache Kafka event streaming, and real-time data replication pipelines.",
+    techStack: ["PostgreSQL", "MongoDB", "Apache Kafka", "Redis", "Elasticsearch", "Snowflake"],
+    badge: "Sub-Second Event Sync",
   },
 ];
 
@@ -656,69 +680,163 @@ function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 5: FULL-STACK EXPERTISE TEASER ── */}
-      <section className="bg-white py-24 border-b border-blue-100/70 relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-12 items-center">
-            {/* Left Column: Heading and CTAs */}
-            <div className="lg:col-span-5">
-              <Reveal>
-                <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.28em] text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/60 mb-4">
-                  <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
-                  Full-Stack Expertise
-                </span>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black tracking-tight text-slate-900 leading-tight">
-                  Engineering Depth Across the{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
-                    Modern Stack
-                  </span>
-                </h2>
-                <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-                  From frontier Generative AI and low-latency microservices to distributed multi-cloud platforms and enterprise databases, our specialized engineering squads build mission-critical solutions.
-                </p>
+      {/* ── SECTION 5: FULL-STACK EXPERTISE SHOWCASE ── */}
+      <section className="bg-gradient-to-b from-white via-[#f6faff] to-[#edf4fc] py-24 border-b border-blue-100/80 relative overflow-hidden">
+        {/* Ambient background glows */}
+        <div className="pointer-events-none absolute -top-40 right-10 h-96 w-96 rounded-full bg-blue-300/15 blur-[120px]" />
+        <div className="pointer-events-none absolute -bottom-40 left-10 h-96 w-96 rounded-full bg-cyan-300/15 blur-[120px]" />
 
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <Link
-                    to="/expertise"
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
-                  >
-                    <span>View Technology Matrix</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-6 py-3.5 text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-all"
-                  >
-                    <span>Consult an Architect</span>
-                  </Link>
-                </div>
-              </Reveal>
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <Reveal className="text-center max-w-3xl mx-auto mb-14">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.28em] text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/60 mb-4">
+              <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse" />
+              Full-Stack Expertise
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black tracking-tight text-slate-900 leading-tight">
+              Engineering Depth Across the{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
+                Modern Stack
+              </span>
+            </h2>
+            <p className="mt-3 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto">
+              Specialized engineering squads building mission-critical solutions across frontier AI, distributed microservices, multi-cloud DevOps, and real-time data pipelines.
+            </p>
+
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3.5">
+              <Link
+                to="/expertise"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:scale-105 hover:gap-3"
+              >
+                <span>Explore Full Technology Matrix</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 backdrop-blur-sm px-6 py-3 text-xs sm:text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-600 transition-all"
+              >
+                <span>Consult an Architect</span>
+              </Link>
             </div>
+          </Reveal>
 
-            {/* Right Column: 6 Stack Domain Chips */}
-            <div className="lg:col-span-7">
-              <div className="grid gap-4 sm:grid-cols-2">
-                {techHighlights.map((t, idx) => {
-                  const Icon = t.icon;
-                  return (
-                    <Reveal key={t.domain} delay={idx * 50}>
-                      <div className="rounded-2xl border border-blue-100/80 bg-white p-5 shadow-card hover:border-blue-400/60 hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
-                        <div className="flex items-center gap-3 mb-2.5">
-                          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                            <Icon className="h-4 w-4" />
-                          </span>
-                          <h4 className="text-sm font-bold text-slate-900">{t.domain}</h4>
-                        </div>
-                        <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                          {t.description}
-                        </p>
+          {/* 6 Architectural Domain Cards */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {techHighlights.map((t, idx) => {
+              const Icon = t.icon;
+              return (
+                <Reveal key={t.domain} delay={idx * 60}>
+                  <div className="group relative flex h-full flex-col justify-between rounded-2xl sm:rounded-3xl border border-blue-100/80 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400/70 hover:shadow-elegant overflow-hidden">
+                    {/* Top gradient accent line */}
+                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    <div>
+                      {/* Domain Header */}
+                      <div className="flex items-center justify-between">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-2xs group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                          <Icon className="h-5 w-5" />
+                        </span>
+                        <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
+                          Domain {t.step}
+                        </span>
                       </div>
-                    </Reveal>
-                  );
-                })}
+
+                      <h3 className="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        {t.domain}
+                      </h3>
+                      <p className="text-xs font-semibold text-cyan-600 mt-0.5">
+                        {t.tagline}
+                      </p>
+
+                      <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+                        {t.description}
+                      </p>
+
+                      {/* Tech Badges Cluster */}
+                      <div className="mt-4 pt-3.5 border-t border-slate-100">
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block mb-2">
+                          Core Technologies
+                        </span>
+                        <div className="flex flex-wrap gap-1.5">
+                          {t.techStack.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-0.5 rounded-md text-[11px] font-mono font-medium bg-slate-50 text-slate-700 border border-slate-200/70 group-hover:border-blue-300/70 group-hover:bg-blue-50/50 group-hover:text-blue-700 transition-colors"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Card Footer: Benchmark Badge & Link */}
+                    <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs">
+                      <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-cyan-500 shrink-0" />
+                        <span>{t.badge}</span>
+                      </span>
+
+                      <Link
+                        to="/expertise"
+                        className="inline-flex items-center gap-1 font-bold text-blue-600 hover:text-blue-800 text-xs transition-colors"
+                      >
+                        <span>Details</span>
+                        <ChevronRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+
+          {/* Enterprise Architecture Standards Ribbon */}
+          <Reveal className="mt-12">
+            <div className="rounded-2xl border border-blue-100/80 bg-white/90 backdrop-blur-sm p-5 sm:p-6 shadow-card">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
+                    <ShieldCheck className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">Zero-Trust IAM</div>
+                    <div className="text-[11px] text-slate-500">Least privilege role policies</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
+                    <CheckCircle2 className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">SOC 2 &amp; ISO Compliance</div>
+                    <div className="text-[11px] text-slate-500">Enterprise audit standards</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
+                    <Rocket className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">Multi-Region HA</div>
+                    <div className="text-[11px] text-slate-500">99.99% uptime availability</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 pt-2 sm:pt-0 sm:px-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 font-bold">
+                    <Zap className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">Sub-50ms P99</div>
+                    <div className="text-[11px] text-slate-500">Low-latency API architecture</div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
