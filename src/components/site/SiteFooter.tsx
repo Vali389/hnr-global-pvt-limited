@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle, Linkedin } from "lucide-react";
 import logo from "@/assets/hnr-white-logo.png";
 
 export function SiteFooter() {
@@ -27,6 +27,18 @@ export function SiteFooter() {
             A software development, product engineering and IT talent partner headquartered in
             Visakhapatnam with a strategic presence in Hyderabad.
           </p>
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/company/hnr-global-pvt-ltd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white transition-all hover:bg-blue-600 hover:border-blue-500 hover:scale-105 shadow-sm"
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin className="h-4 w-4 text-sky-400" />
+              <span>Follow us on LinkedIn</span>
+            </a>
+          </div>
         </div>
 
         <div>

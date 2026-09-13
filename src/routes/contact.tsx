@@ -384,7 +384,7 @@ function Contact() {
                       <Instagram className="h-5 w-5" />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/company/hnr-global-pvt-ltd/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all hover:bg-blue-600 hover:border-blue-500 hover:scale-110 shadow-sm"
